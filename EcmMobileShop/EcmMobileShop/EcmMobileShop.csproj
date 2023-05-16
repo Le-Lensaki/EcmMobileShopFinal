@@ -307,6 +307,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StartUp.Auth.cs" />
+    <Compile Include="Areas\OneTechAdmin\Controllers\AccountAdminController.cs" />
     <Compile Include="Areas\OneTechAdmin\Controllers\BrandController.cs" />
     <Compile Include="Areas\OneTechAdmin\Controllers\DiscountKHController.cs" />
     <Compile Include="Areas\OneTechAdmin\Controllers\DiscountSPController.cs" />
@@ -2715,6 +2716,11 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\OneTechAdmin\Views\AccountAdmin\Create.cshtml" />
+    <Content Include="Areas\OneTechAdmin\Views\AccountAdmin\Delete.cshtml" />
+    <Content Include="Areas\OneTechAdmin\Views\AccountAdmin\Details.cshtml" />
+    <Content Include="Areas\OneTechAdmin\Views\AccountAdmin\Edit.cshtml" />
+    <Content Include="Areas\OneTechAdmin\Views\AccountAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\isotope.pkgd.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

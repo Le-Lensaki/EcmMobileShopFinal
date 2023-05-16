@@ -41,5 +41,7 @@ namespace EcmMobileShop.Models
         public virtual DbSet<tb_SANPHAM> tb_SANPHAM { get; set; }
         public virtual DbSet<tb_TINHTRANGDH> tb_TINHTRANGDH { get; set; }
         public virtual DbSet<tb_YKIEN> tb_YKIEN { get; set; }
+
+        public System.Data.Entity.DbSet<EcmMobileShop.Models.SignUpModel> SignUpModels { get; set; }
     }
 }

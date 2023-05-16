@@ -290,7 +290,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </a>
                                 </li>
                             </ul>
-
+                        </li>
+                        <li class="nav-item menu-open">
+                            <a href="@Url.Action("Index", "", new { area = "OneTechAdmin" })" class="nav-link active">
+                                <i class="nav-icon fas fa-user-circle"></i>
+                                <p>
+                                    Tài khoản
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("Index", "AccountAdmin", new { area = "OneTechAdmin" })" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Danh sách tài khoản</p>
+                                    </a>
+                                </li>
+                            </ul>                          
                         </li>
 
 
