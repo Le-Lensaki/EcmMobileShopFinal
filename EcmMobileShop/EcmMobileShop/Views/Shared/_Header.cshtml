@@ -145,21 +145,9 @@
                             <ul class="standard_dropdown main_nav_dropdown">
                                 <li><a href="@Url.Action("Index", "Home")">Home<i class="fas fa-chevron-down"></i></a></li>
                                 <li><a href="@Url.Action("Shop", "Home")">Shop<i class="fas fa-chevron-down"></i></a></li>
-                                <li class="hassubs">
-                                    <a href="#">Khuyến mãi<i class="fas fa-chevron-down"></i></a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                    </ul>
+                                <li >
+                                    <a href="@Url.Action("Shop", "Home", new {km = "true"})">Khuyến mãi</a>
+                                    
                                 </li>
                                 @*<li class="hassubs">
                                     <a href="#">Thương hiệu<i class="fas fa-chevron-down"></i></a>
@@ -181,11 +169,11 @@
                                     <a href="#">Page<i class="fas fa-chevron-down"></i></a>
                                     <ul>
                                         <li><a href="@Url.Action("Shop", "Home")">Shop<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="@Url.Action("Contact", "Home")">Liên hệ<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="@Url.Action("Contact", "Home")">Ý kiến<i class="fas fa-chevron-down"></i></a></li>
                                     </ul>
                                 </li>
                                 <li><a href="@Url.Action("FormHistory", "OrdersPayment")">Lịch sử đặt hàng<i class="fas fa-chevron-down"></i></a></li>
-                                <li><a href="@Url.Action("Contact", "Home")">Liên hệ<i class="fas fa-chevron-down"></i></a></li>
+                                <li><a href="@Url.Action("Contact", "Home")">Ý kiến<i class="fas fa-chevron-down"></i></a></li>
                             </ul>
                         </div>
 

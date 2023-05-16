@@ -63,7 +63,7 @@ namespace EcmMobileShop.Controllers
             return View(modelCollection);
         }
 
-        public ActionResult Shop(int? page, int? idLoai, int? idHang, string noidungtimkiem)
+        public ActionResult Shop(int? page, int? idLoai, int? idHang, string noidungtimkiem,string km)
         {
            
             if (page == null) page = 1;
@@ -88,7 +88,25 @@ namespace EcmMobileShop.Controllers
 
 
                 return View(mobile.ToPagedList(pageNumber, pageSize));
-            } if(noidungtimkiem != null)
+            }
+            if (km != null)
+            {
+
+                var mobile = ecmMobile.tb_SANPHAM
+                        .Join(ecmMobile.tb_DISCOUNTSP, sp => sp.IdSP, dc => dc.IdSP, (sp, dc) => new { sp, dc })
+                        .OrderBy(b => b.sp.IdSP)
+                        .Where(p => p.sp.IdLoaiSP == idLoai && p.sp.TrangThai == true && p.sp.tb_HANGSP.TrangThai == true && p.sp.tb_LOAISP.TrangThai == true && p.dc != null)
+                        .Select(p => p.sp);
+
+
+
+                int pageSize = 15;
+                int pageNumber = (page ?? 1);
+
+
+                return View(mobile.ToPagedList(pageNumber, pageSize));
+            }
+            if (noidungtimkiem != null)
             {
                 var mobile = ecmMobile.tb_SANPHAM
                             .OrderBy(b => b.IdSP)
@@ -123,6 +141,7 @@ namespace EcmMobileShop.Controllers
             var listCTSP = ecmMobile.tb_CT_SANPHAM.Where(p => p.IdSP == id).ToList();
             var listmau = ecmMobile.tb_MAUSAC.ToList();
             var dcSP = ecmMobile.tb_DISCOUNTSP.Where(dc => dc.IdSP == id).ToList();
+            var feedback = ecmMobile.tb_FEEDBACK.Where(fb => fb.tb_CHITIETHOADON.tb_CT_SANPHAM.IdSP == id).OrderByDescending(fb => fb.NgayFB).ToList();
 
             var modelCollection = new ModelCollection();
             modelCollection.AddModel(tb_SANPHAMs);
@@ -133,6 +152,10 @@ namespace EcmMobileShop.Controllers
             if(dcSP != null)
             {
                 modelCollection.AddModel(dcSP);
+            }
+            if(feedback != null)
+            {
+                modelCollection.AddModel(feedback);
             }    
             
 

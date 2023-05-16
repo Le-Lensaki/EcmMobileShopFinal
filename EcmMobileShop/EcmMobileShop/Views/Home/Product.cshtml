@@ -16,6 +16,7 @@
     var listmau = (Model.GetModel<List<tb_MAUSAC>>());
 
     var dcSP = (Model.GetModel<List<tb_DISCOUNTSP>>());
+    var feedback = (Model.GetModel<List<tb_FEEDBACK>>());
 
     var mausac = 0;
     foreach (var item in listctsp)
@@ -31,7 +32,7 @@
     {
         newPrice = dcSP[0].tb_SANPHAM.Gia * ((100 - dcSP[0].GiaTri) / 100);
     }
-    
+
 }
 
 
@@ -51,7 +52,7 @@
                     {
                         if (item.ImagePathDetail != null)
                         {
-                        <li data-image="@item.ImagePathDetail"><img src="@item.ImagePathDetail" alt=""></li>
+                            <li data-image="@item.ImagePathDetail"><img src="@item.ImagePathDetail" alt=""></li>
                         }
                     }
                 </ul>
@@ -120,7 +121,7 @@
                             {
                                 <div class="product_price">$@product.Gia</div>
                             }
-                            
+
                             <div class="button_container">
                                 <button type="button" class="button cart_button">Thêm vào giỏ</button>
                                 <div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -132,8 +133,55 @@
             </div>
 
         </div>
+        <div class="row" style="max-width: 1140px; margin:10px ">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Bảng feedback của sản phẩm</h3>
+
+                        <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-default">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0" style="height: 300px;">
+                        <table class="table table-head-fixed text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>Ngày feedback</th>
+                                    <th>Nội dung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (feedback.Count > 0)
+                                {
+                                    foreach (var item in feedback)
+                                    {
+                                        <tr>
+                                            <td>@item.NgayFB</td>
+                                            <td>@item.Noidung</td>
+                                        </tr>
+                                    }
+                                }                              
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
     </div>
 </div>
+
 
 <script>
     // Lấy các phần tử DOM cần sử dụng

@@ -1,8 +1,13 @@
 ﻿@model IEnumerable<EcmMobileShop.Models.tb_CHITIETHOADON>
+@using EcmMobileShop.Models;
 
 @{
     ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    tb_CHITIETHOADON cthd = Model.SingleOrDefault(kh => kh.tb_HOADON.IdTinhTrangDH == 5);
+
+    int? idkh = Model.SingleOrDefault(kh => kh.GiaBan > 0).tb_HOADON.IdKH;
 }
 
 <link rel="stylesheet" type="text/css" href="~/Content/Styles/history_order.css">
@@ -11,7 +16,7 @@
     <div class="container">
         <h4>Chi tiết hoá đơn</h4>
         <hr />
-        
+
         <table class="table">
             <tr>
                 <th>
@@ -26,7 +31,11 @@
                 <th>
                     @Html.DisplayNameFor(model => model.tb_CT_SANPHAM.tb_MAUSAC.TenMau)
                 </th>
-                <th></th>
+                @if (cthd != null)
+                {
+                    <th></th>
+                }
+
             </tr>
             @if (Model == null)
             {
@@ -48,16 +57,25 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.tb_CT_SANPHAM.tb_MAUSAC.TenMau)
                         </td>
-                        
+                        @if (cthd != null)
+                        {
+                            <td>
+                                @Html.ActionLink("Đánh giá", "Feedback", new { IdctHD = item.IdctHD }, new { @class = "btn btn-success" })
+                            </td>
+                        }
+
                     </tr>
                 }
             }
 
         </table>
-        @*<p>
+        
+        <div>
+            @Html.ActionLink("Back to List", "HistoryOrders", new { idkh =  idkh})
+        </div>
+        
+        
 
-            @Html.ActionLink("Back to List", "HistoryOrders", new { idkh = Model.[]})
-        </p>*@
     </div>
 </div>
     

@@ -107,6 +107,24 @@ namespace EcmMobileShop.Controllers
         public ActionResult FormHistory()
         {
             tb_KHACHHANG kh = new tb_KHACHHANG();
+            if (User.Identity.IsAuthenticated) // Kiểm tra xem User đã đăng nhập hay chưa
+            {
+                var user = User.Identity as ClaimsIdentity;
+                var addressClaim = user.FindFirst(ClaimTypes.StreetAddress);
+                string address = addressClaim != null ? addressClaim.Value : "";
+
+                // Lấy thông tin số điện thoại của user
+                var phoneClaim = user.FindFirst(ClaimTypes.MobilePhone);
+                string phone = phoneClaim != null ? phoneClaim.Value : "";
+
+                // Lấy thông tin số điện thoại của user
+                var nameClaim = user.FindFirst(ClaimTypes.Name);
+                string name = nameClaim != null ? nameClaim.Value : "";
+
+                kh = ecmMobile.tb_KHACHHANG.SingleOrDefault(k => k.TenKH == name && k.SDT == phone && k.TrangThai == true);
+
+                return RedirectToAction("HistoryOrders", "OrdersPayment", new { idkh = kh.IdKH });
+            }
             return View(kh);
         }
         [HttpPost]
@@ -115,8 +133,7 @@ namespace EcmMobileShop.Controllers
         {
             try
             {
-
-
+               
                 if (ModelState.IsValid)
                 {
                     tb_KHACHHANG kh = ecmMobile.tb_KHACHHANG.SingleOrDefault(k => k.TenKH == model.TenKH && k.SDT == model.SDT && k.TrangThai == true);
@@ -154,6 +171,44 @@ namespace EcmMobileShop.Controllers
 
 
             return View(cthd);
+        }
+
+        public ActionResult Feedback(int IdctHD)
+        {
+            tb_FEEDBACK a = new tb_FEEDBACK();
+            a.IdctHD = IdctHD;
+            return View(a);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<ActionResult> Feedback(tb_FEEDBACK model)
+        {
+            try
+            {
+
+                if (ModelState.IsValid)
+                {
+                    model.NgayFB = DateTime.Now;
+                    ecmMobile.tb_FEEDBACK.Add(model);
+                    ecmMobile.SaveChanges();
+                    tb_CHITIETHOADON a = ecmMobile.tb_CHITIETHOADON.SingleOrDefault(mc => mc.IdctHD == model.IdctHD);
+
+                    return RedirectToAction("Details", "OrdersPayment",new { ordersID = a.IdHD});
+                }
+                else
+                {
+                    model = new tb_FEEDBACK();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Info
+                Console.Write(ex);
+            }
+
+            // If we got this far, something failed, redisplay form
+            return this.View(model);
         }
     }
 }
