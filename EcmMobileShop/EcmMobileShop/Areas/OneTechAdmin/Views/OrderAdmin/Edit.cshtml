@@ -1,0 +1,67 @@
+﻿@model EcmMobileShop.Models.tb_HOADON
+
+@{
+    ViewBag.Title = "Trang edit hoá đơn";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+<div class="card card-info">
+    <div class="card-header">
+        <h3 class="card-title">Chi tiết hoá đơn</h3>
+    </div>
+    <div class="card-body">
+        @using (Html.BeginForm())
+        {
+            //@Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.IdHD)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IdTinhTrangDH, "Tình trạng đơn hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("IdTinhTrangDH", null, htmlAttributes: new { @class = "form-control", @id = "IdTinhTrangDH" })
+                        @Html.ValidationMessageFor(model => model.IdTinhTrangDH, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IdKH, "ID khách hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.IdKH, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+
+                        @Html.ValidationMessageFor(model => model.IdKH, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DiaChiGiao, "Địa chỉ giao", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DiaChiGiao, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DiaChiGiao, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NgayLap, "Ngày lập", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NgayLap, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.NgayLap, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+</div>
+

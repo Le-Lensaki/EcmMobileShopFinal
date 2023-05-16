@@ -1,0 +1,65 @@
+﻿@model IEnumerable<EcmMobileShop.Models.tb_CHITIETHOADON>
+
+@{
+    ViewBag.Title = "Trang chi tiết hoá đơn";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+    int id = ViewBag.id;
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Chi tiết hoá đơn @ViewBag.id</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng bán</th>
+                    <th>Giá bán</th>
+                    <th>Màu sắc</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model == null)
+                {
+                }
+                else
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TenSP)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SoLuongBan)
+                            </td>
+                            <td>
+                                $@Html.DisplayFor(modelItem => item.GiaBan)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tb_CT_SANPHAM.tb_MAUSAC.TenMau)
+                            </td>
+
+                        </tr>
+                    }
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng bán</th>
+                    <th>Giá bán</th>
+                    <th>Màu sắc</th>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

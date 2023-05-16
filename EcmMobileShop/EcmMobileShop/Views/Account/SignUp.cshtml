@@ -1,0 +1,78 @@
+﻿@model EcmMobileShop.Models.SignUpModel
+
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/Content/Styles/Login.css">
+<div id="Login" class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Đăng ký</h3>
+                <div class="d-flex justify-content-end social_icon">
+                    <span><i class="fab fa-facebook-square"></i></span>
+                    <span><i class="fab fa-google-plus-square"></i></span>
+                </div>
+            </div>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="card-body">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="input-group form-group login">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Họ và tên" })
+                </div>
+                <div class="input-group form-group login">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                    </div>
+                    @Html.TextBoxFor(model => model.SDT, new { @class = "form-control", @placeholder = "Số điện thoại" } )
+                </div>
+                <div class="input-group form-group login">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-home"></i></span>
+                    </div>
+                    @Html.TextBoxFor(model => model.Diachi, new { @class = "form-control", @placeholder = "Địa chỉ" })
+                </div>
+                <div class="input-group form-group login">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    @Html.TextBoxFor(model => model.Email, new  { @class = "form-control", @placeholder = "Email đăng ký", @type = "email" } )
+                </div>
+                <div class="input-group form-group login">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    </div>
+                    @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "Password", @type = "password" } )
+                </div>
+                <div class="input-group form-group login">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" />
+                </div>
+
+
+                <div class="form-group">
+                    <input type="submit" value="Đăng ký" class="btn float-right login_btn">
+                </div>
+            }
+        </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    Đã có tài khoản?@Html.ActionLink("Đăng nhập", "Login", "Account")
+                </div>
+                <div class="d-flex justify-content-center links">
+                    @Html.ActionLink("Bạn quên mật khẩu?", "ForgotPassword", "Account")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

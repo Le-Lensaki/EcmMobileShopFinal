@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c6744ad9a45d4a52a81a86f632fb5e3f" Name="Diagram1">
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_Banner" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_BannerSP" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_CHITIETHOADON" Width="1.5" PointX="10.5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_CT_SANPHAM" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_DISCOUNTKH" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_DISCOUNTSP" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_DISCOUNTTIME" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_FEEDBACK" Width="1.5" PointX="12.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_HANGSP" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_HOADON" Width="1.5" PointX="8.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_KHACHHANG" Width="1.5" PointX="6" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_LOAISP" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_MAUSAC" Width="1.5" PointX="6" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_SANPHAM" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_TINHTRANGDH" Width="1.5" PointX="6" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcmMobileShopModel.tb_YKIEN" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_SP_BannerSP" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_CTHD_FB" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_ctSP_CTHD" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_HD_CTHD" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_tb_CT_SANPHAM_tb_MAUSAC" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_tb_CT_SANPHAM_tb_SANPHAM" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_KH_DC" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_SP_DC" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_tb_SANPHAM_tb_HANGSP" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_KH_HD" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_TT_HD" ManuallyRouted="false" />
+        <AssociationConnector Association="EcmMobileShopModel.fk_tb_SANPHAM_tb_LOAISP" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

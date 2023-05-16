@@ -1,0 +1,207 @@
+﻿@model PagedList.IPagedList<EcmMobileShop.Models.tb_SANPHAM>
+@using EcmMobileShop.Models;
+
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Shop";
+    EcmMobileShopEntities ecmMobile = new EcmMobileShopEntities();
+
+    var listLoai = ecmMobile.tb_LOAISP.Where(loai => loai.TrangThai == true).ToList();
+    var listHang = ecmMobile.tb_HANGSP.Where(hang => hang.TrangThai == true).ToList();
+    var listdcSP = ecmMobile.tb_DISCOUNTSP.Where(ds => ds.TinhTrang == true).ToList();
+}
+<link rel="stylesheet" type="text/css" href="~/Content/Styles/shop_styles.css">
+<link rel="stylesheet" type="text/css" href="~/Content/Styles/shop_responsive.css">
+
+
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="../Content/images/shop_background.jpg"></div>
+    <div class="home_overlay"></div>
+    <div class="home_content d-flex flex-column align-items-center justify-content-center">
+        <h2 class="home_title">Smartphones & Tablets</h2>
+    </div>
+</div>
+
+<!-- Shop -->
+
+<div class="shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+
+                <!-- Shop Sidebar -->
+                <div class="shop_sidebar">
+                    <div class="sidebar_section">
+                        <div class="sidebar_title">Categories</div>
+                        <ul class="sidebar_categories">
+                            @foreach (var item in listLoai)
+                            {
+                                <li><a href="@Url.Action("Shop","Home", new { idLoai = item.IdLoaiSP })">@item.TenLoaiSP</a></li>
+                            }
+                            
+
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar_section">
+                        <div class="sidebar_subtitle brands_subtitle">Brands</div>
+                        <ul class="brands_list">
+                            @foreach (var item in listHang)
+                            {
+                                
+                                <li class="brand"><a href="@Url.Action("Shop","Home", new { idHang = item.IdHangSP })">@item.TenHangSP</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-9">
+
+                <!-- Shop Content -->
+
+                <div class="shop_content">
+                    <div class="shop_bar clearfix">
+                        <div class="shop_product_count"><span>186</span> products found</div>
+                        <div class="shop_sorting">
+                            <span>Sort by:</span>
+                            <ul>
+                                <li>
+                                    <span class="sorting_text">highest rated<i class="fas fa-chevron-down"></span></i>
+                                    <ul>
+                                        <li class="shop_sorting_button" data-isotope-option='{ "sortBy": "original-order" }'>highest rated</li>
+                                        <li class="shop_sorting_button" data-isotope-option='{ "sortBy": "name" }'>name</li>
+                                        <li class="shop_sorting_button" data-isotope-option='{ "sortBy": "price" }'>price</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product_grid">
+                        <div class="product_grid_border"></div>
+                        @foreach (var dc in listdcSP)
+                        {
+                            double? newPrice = dc.tb_SANPHAM.Gia * ((100 - dc.GiaTri)/100);
+                            <!-- Product Item -->
+                            <div class="product_item discount">
+
+                                <div class="product_border"></div>
+                                <a href="@Url.Action("Product","Home",new { id = dc.IdSP})" tabindex="0">
+                                    <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="@Html.DisplayFor(m => dc.tb_SANPHAM.ImagePathMain)" alt=""></div>
+                                </a>
+                                <div class="product_content">
+                                    <div class="product_price">$@newPrice<span>$@Html.DisplayFor(m => dc.tb_SANPHAM.Gia)</span></div>
+                                    <div class="product_name"><div><a href="@Url.Action("Product","Home",new { id = dc.IdSP})" tabindex="0">@Html.DisplayFor(m => dc.tb_SANPHAM.TenSP)</a></div></div>
+                                </div>
+                                <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                <ul class="product_marks">
+                                    <li class="product_mark product_discount">-@dc.GiaTri%</li>
+                                    <li class="product_mark product_new">new</li>
+                                </ul>
+                            </div>
+                        }
+                        @foreach (var item in Model)
+                        {
+                            if (listdcSP.Any(dc => dc.IdSP == item.IdSP))
+                            {
+                                
+                            }
+                            else if (DateTime.Now.Subtract(item.NgayNhap.Value).Days < 30)
+                            {
+                                <!-- Product Item -->
+                                <div class="product_item is_new">
+
+                                    <div class="product_border"></div>
+                                    <a href="@Url.Action("Product","Home",new { id = item.IdSP})" tabindex="0">
+                                        <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="@Html.DisplayFor(m => item.ImagePathMain)" alt=""></div>
+                                    </a>
+                                    <div class="product_content">
+                                        <div class="product_price">$@Html.DisplayFor(m => item.Gia)</div>
+                                        <div class="product_name"><div><a href="@Url.Action("Product","Home",new { id = item.IdSP})" tabindex="0">@Html.DisplayFor(m => item.TenSP)</a></div></div>
+                                    </div>
+                                    <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="product_marks">
+                                        <li class="product_mark product_discount">-25%</li>
+                                        <li class="product_mark product_new">new</li>
+                                    </ul>
+                                </div>
+                            }
+                            else
+                            {
+                                <!-- Product Item -->
+                                <div class="product_item">
+
+                                    <div class="product_border"></div>
+                                    <a href="@Url.Action("Product","Home",new { id = item.IdSP})" tabindex="0">
+                                        <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="@Html.DisplayFor(m => item.ImagePathMain)" alt=""></div>
+                                    </a>
+                                    <div class="product_content">
+                                        <div class="product_price">$@Html.DisplayFor(m => item.Gia)</div>
+                                        <div class="product_name"><div><a href="@Url.Action("Product","Home",new { id = item.IdSP})" tabindex="0">@Html.DisplayFor(m => item.TenSP)</a></div></div>
+                                    </div>
+                                    <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="product_marks">
+                                        <li class="product_mark product_discount">-25%</li>
+                                        <li class="product_mark product_new">new</li>
+                                    </ul>
+                                </div>
+                            }
+
+                        }
+                    </div>
+                   
+
+                    <!-- Shop Page Navigation -->
+
+                    <div class="shop_page_nav d-flex flex-row">
+                        <div class="page_prev d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-left"></i></div>
+                        <ul class="page_nav d-flex flex-row">
+                            @Html.PagedListPager(Model, page => Url.Action("Shop", "Home", new { idLoai = Request.QueryString["idLoai"], page }))
+
+                        </ul>
+                        <div class="page_next d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Brands -->
+
+<div class="brands">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="brands_slider_container">
+
+                    <!-- Brands Slider -->
+
+                    <div class="owl-carousel owl-theme brands_slider">
+
+                        <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="~/Content/images/brands_1.jpg" alt=""></div></div>
+                        <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="~/Content/images/brands_2.jpg" alt=""></div></div>
+                        <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="~/Content/images/brands_3.jpg" alt=""></div></div>
+                        <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="~/Content/images/brands_4.jpg" alt=""></div></div>
+                        <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="~/Content/images/brands_5.jpg" alt=""></div></div>
+                        <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="~/Content/images/brands_6.jpg" alt=""></div></div>
+                        <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="~/Content/images/brands_7.jpg" alt=""></div></div>
+                        <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="~/Content/images/brands_8.jpg" alt=""></div></div>
+
+                    </div>
+
+                    <!-- Brands Slider Navigation -->
+                    <div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
+                    <div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿@model EcmMobileShop.Models.tb_KHACHHANG
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/Content/Styles/Login.css">
+<div id="Login" class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Thông tin đặt hàng</h3>               
+            </div>
+            
+        <div class="card-body">
+            @using (Html.BeginForm())
+            {
+               
+                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="input-group form-group login">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    @Html.TextBoxFor(model => model.TenKH, new { @class = "form-control", @placeholder = "Họ và tên" })
+                </div>
+                <div class="input-group form-group login">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                    </div>
+                    @Html.TextBoxFor(model => model.SDT, new { @class = "form-control", @placeholder = "Số điện thoại" } )
+                </div>
+                <div class="input-group form-group login">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-home"></i></span>
+                    </div>
+                    @Html.TextBoxFor(model => model.DiaChi, new { @class = "form-control", @placeholder = "Địa chỉ" })
+                </div>
+
+
+                <div class="form-group">
+                    <input type="submit" value="Đặt hàng" class="btn float-right login_btn">
+                </div>
+            }
+        </div>
+        </div>
+    </div>
+</div>

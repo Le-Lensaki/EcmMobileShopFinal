@@ -1,0 +1,69 @@
+﻿@model IEnumerable<EcmMobileShop.Models.tb_HOADON>
+
+@{
+    ViewBag.Title = "Trang danh sách hoá đơn";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Danh sách hoá đơn</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Địa chỉ giao hàng</th>
+                    <th>Số điện thoại</th>
+                    <th>Ngày lập</th>
+                    <th>Tên khách hàng</th>
+                    <th>Tình trạng đơn hàng</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DiaChiGiao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tb_KHACHHANG.SDT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayLap)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tb_KHACHHANG.TenKH)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tb_TINHTRANGDH.TenTinhTrang)
+                    </td>
+                    <td>
+
+                        @Html.ActionLink("Edit", "Edit", new { id = item.IdHD }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Details", "Details", new { id = item.IdHD }, new { @class = "btn btn-primary" })
+                       
+                    </td>
+                </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Địa chỉ giao hàng</th>
+                    <th>Số điện thoại</th>
+                    <th>Ngày lập</th>
+                    <th>Tên khách hàng</th>
+                    <th>Tình trạng đơn hàng</th>
+                    <th></th>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>

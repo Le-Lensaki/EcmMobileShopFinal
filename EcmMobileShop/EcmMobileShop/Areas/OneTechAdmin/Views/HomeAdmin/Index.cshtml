@@ -1,0 +1,217 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-6">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>
+                            @{
+                                Html.RenderAction("GetNewOrders", "OrderAdmin");
+                            }
+                        </h3>
+
+                        <p>Đơn hàng mới</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                    <a href="@Url.Action("Index", "OrderAdmin", new { area = "OneTechAdmin" })" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+
+            <div class="col-lg-6 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3>
+                            @{
+                                Html.RenderAction("GetUser", "tKHACHHANG");
+                            }
+                        </h3>
+
+                        <p>Khách hàng đăng ký</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                    <a href="@Url.Action("Index", "tKHACHHANG", new { area = "OneTechAdmin" })" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+
+        </div>
+
+        <div class="row">
+
+            <!-- /.col-md-6 -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header border-0">
+                        <div class="d-flex justify-content-between">
+                            <h3 class="card-title">Doanh số</h3>
+                            <a href="@Url.Action("Index", "ReportDT", new { area = "OneTechAdmin" })">Xem báo cáo</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <p class="d-flex flex-column">
+                                <span class="text-bold text-lg">
+                                    $@{
+                                        Html.RenderAction("getDoanhThu", "HomeAdmin");
+                                    }
+                                </span>
+                                <span>Toàn bộ thời gian</span>
+                            </p>
+                            <p class="ml-auto d-flex flex-column text-right">
+                                <span class="text-success">
+                                    <i class="fas fa-arrow-up"></i> @{
+                                        Html.RenderAction("getPhanTramDoanhSo", "HomeAdmin");
+                                    }%
+                                </span>
+                                <span class="text-muted">Tháng trước</span>
+                            </p>
+                        </div>
+                        <!-- /.d-flex -->
+
+                        <div class="position-relative mb-4">
+                            <canvas id="sales-chart" height="200"></canvas>
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-end">
+                            <span class="mr-2">
+                                <i class="fas fa-square text-primary"></i> Năm nay
+                            </span>
+
+                            <span>
+                                <i class="fas fa-square text-gray"></i> Năm nay
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card -->       
+                
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header border-0">
+                        <h3 class="card-title">Products</h3>
+                        <div class="card-tools">
+                            <a href="#" class="btn btn-tool btn-sm">
+                                <i class="fas fa-download"></i>
+                            </a>
+                            <a href="#" class="btn btn-tool btn-sm">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-striped table-valign-middle">
+                            <thead>
+                                <tr>
+                                    <th>Sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Doanh số</th>
+                                    <th>Thông tin chi tiết</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>
+
+                                        Some Product
+                                    </td>
+                                    <td>$13 USD</td>
+                                    <td>
+                                        <small class="text-success mr-1">
+                                            <i class="fas fa-arrow-up"></i>
+                                            12%
+                                        </small>
+                                        12,000 Sold
+                                    </td>
+                                    <td>
+                                        <a href="#" class="text-muted">
+                                            <i class="fas fa-search"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                        Another Product
+                                    </td>
+                                    <td>$29 USD</td>
+                                    <td>
+                                        <small class="text-warning mr-1">
+                                            <i class="fas fa-arrow-down"></i>
+                                            0.5%
+                                        </small>
+                                        123,234 Sold
+                                    </td>
+                                    <td>
+                                        <a href="#" class="text-muted">
+                                            <i class="fas fa-search"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                        Amazing Product
+                                    </td>
+                                    <td>$1,230 USD</td>
+                                    <td>
+                                        <small class="text-danger mr-1">
+                                            <i class="fas fa-arrow-down"></i>
+                                            3%
+                                        </small>
+                                        198 Sold
+                                    </td>
+                                    <td>
+                                        <a href="#" class="text-muted">
+                                            <i class="fas fa-search"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                        Perfect Item
+                                        <span class="badge bg-danger">NEW</span>
+                                    </td>
+                                    <td>$199 USD</td>
+                                    <td>
+                                        <small class="text-success mr-1">
+                                            <i class="fas fa-arrow-up"></i>
+                                            63%
+                                        </small>
+                                        87 Sold
+                                    </td>
+                                    <td>
+                                        <a href="#" class="text-muted">
+                                            <i class="fas fa-search"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-md-6 -->
+
+        </div>
+    </div>
+</div>
+
+
+        
+

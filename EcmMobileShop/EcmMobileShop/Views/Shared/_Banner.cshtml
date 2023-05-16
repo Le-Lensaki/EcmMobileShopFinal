@@ -1,0 +1,18 @@
+﻿
+
+
+
+<div class="banner_background" style="background-image:url(/Content/images/banner_background.jpg)"></div>
+<div class="container fill_height">
+    <div class="row fill_height">
+        <div class="banner_product_image"><img src="@{Html.RenderAction("getLinkBannerMain", "Home");}" alt=""></div>
+        <div class="col-lg-5 offset-lg-4 fill_height">
+            <div class="banner_content">
+                <h1 class="banner_text">Điện thoại mới toanh mới ra mắt</h1>
+                <div class="banner_price"><span>$1030</span>$900</div>
+                <div class="banner_product_name">Apple Iphone 18S</div>
+                <div class="button banner_button">@Html.ActionLink("Mua ngay", "Shop", "Home")</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿@model EcmMobileShop.Models.tb_HANGSP
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Bạn muốn xoá hãng này?</h3>
+<div>
+    <h4>tb_HANGSP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenHangSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenHangSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

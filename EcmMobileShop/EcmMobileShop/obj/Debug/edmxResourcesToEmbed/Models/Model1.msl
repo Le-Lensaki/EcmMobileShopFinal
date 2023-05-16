@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EcmMobileShopModelStoreContainer" CdmEntityContainer="EcmMobileShopEntities">
+    <EntitySetMapping Name="tb_Banner">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_Banner">
+        <MappingFragment StoreEntitySet="tb_Banner">
+          <ScalarProperty Name="IdBanner" ColumnName="IdBanner" />
+          <ScalarProperty Name="NgayHH" ColumnName="NgayHH" />
+          <ScalarProperty Name="ImagePathDetail" ColumnName="ImagePathDetail" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_BannerSP">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_BannerSP">
+        <MappingFragment StoreEntitySet="tb_BannerSP">
+          <ScalarProperty Name="IdBannerSP" ColumnName="IdBannerSP" />
+          <ScalarProperty Name="IdSP" ColumnName="IdSP" />
+          <ScalarProperty Name="NgayHH" ColumnName="NgayHH" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="ImagePathDetail" ColumnName="ImagePathDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_CHITIETHOADON">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_CHITIETHOADON">
+        <MappingFragment StoreEntitySet="tb_CHITIETHOADON">
+          <ScalarProperty Name="IdctHD" ColumnName="IdctHD" />
+          <ScalarProperty Name="IdHD" ColumnName="IdHD" />
+          <ScalarProperty Name="IdctSP" ColumnName="IdctSP" />
+          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+          <ScalarProperty Name="SoLuongBan" ColumnName="SoLuongBan" />
+          <ScalarProperty Name="GiaBan" ColumnName="GiaBan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_CT_SANPHAM">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_CT_SANPHAM">
+        <MappingFragment StoreEntitySet="tb_CT_SANPHAM">
+          <ScalarProperty Name="IdctSP" ColumnName="IdctSP" />
+          <ScalarProperty Name="IdSP" ColumnName="IdSP" />
+          <ScalarProperty Name="SoLuongSP" ColumnName="SoLuongSP" />
+          <ScalarProperty Name="IdMau" ColumnName="IdMau" />
+          <ScalarProperty Name="ImagePathDetail" ColumnName="ImagePathDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_DISCOUNTKH">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_DISCOUNTKH">
+        <MappingFragment StoreEntitySet="tb_DISCOUNTKH">
+          <ScalarProperty Name="IdDCKH" ColumnName="IdDCKH" />
+          <ScalarProperty Name="IdKH" ColumnName="IdKH" />
+          <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
+          <ScalarProperty Name="NgayHH" ColumnName="NgayHH" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_DISCOUNTSP">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_DISCOUNTSP">
+        <MappingFragment StoreEntitySet="tb_DISCOUNTSP">
+          <ScalarProperty Name="IdDCSP" ColumnName="IdDCSP" />
+          <ScalarProperty Name="IdSP" ColumnName="IdSP" />
+          <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
+          <ScalarProperty Name="NgayHH" ColumnName="NgayHH" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_DISCOUNTTIME">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_DISCOUNTTIME">
+        <MappingFragment StoreEntitySet="tb_DISCOUNTTIME">
+          <ScalarProperty Name="IdDCTime" ColumnName="IdDCTime" />
+          <ScalarProperty Name="NgayHH" ColumnName="NgayHH" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_FEEDBACK">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_FEEDBACK">
+        <MappingFragment StoreEntitySet="tb_FEEDBACK">
+          <ScalarProperty Name="IdFB" ColumnName="IdFB" />
+          <ScalarProperty Name="IdctHD" ColumnName="IdctHD" />
+          <ScalarProperty Name="Noidung" ColumnName="Noidung" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="NgayFB" ColumnName="NgayFB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_HANGSP">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_HANGSP">
+        <MappingFragment StoreEntitySet="tb_HANGSP">
+          <ScalarProperty Name="IdHangSP" ColumnName="IdHangSP" />
+          <ScalarProperty Name="TenHangSP" ColumnName="TenHangSP" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_HOADON">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_HOADON">
+        <MappingFragment StoreEntitySet="tb_HOADON">
+          <ScalarProperty Name="IdHD" ColumnName="IdHD" />
+          <ScalarProperty Name="IdTinhTrangDH" ColumnName="IdTinhTrangDH" />
+          <ScalarProperty Name="IdKH" ColumnName="IdKH" />
+          <ScalarProperty Name="DiaChiGiao" ColumnName="DiaChiGiao" />
+          <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_KHACHHANG">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_KHACHHANG">
+        <MappingFragment StoreEntitySet="tb_KHACHHANG">
+          <ScalarProperty Name="IdKH" ColumnName="IdKH" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_LOAISP">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_LOAISP">
+        <MappingFragment StoreEntitySet="tb_LOAISP">
+          <ScalarProperty Name="IdLoaiSP" ColumnName="IdLoaiSP" />
+          <ScalarProperty Name="TenLoaiSP" ColumnName="TenLoaiSP" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_MAUSAC">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_MAUSAC">
+        <MappingFragment StoreEntitySet="tb_MAUSAC">
+          <ScalarProperty Name="IdMau" ColumnName="IdMau" />
+          <ScalarProperty Name="MaMau" ColumnName="MaMau" />
+          <ScalarProperty Name="TenMau" ColumnName="TenMau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_SANPHAM">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_SANPHAM">
+        <MappingFragment StoreEntitySet="tb_SANPHAM">
+          <ScalarProperty Name="IdSP" ColumnName="IdSP" />
+          <ScalarProperty Name="IdHangSP" ColumnName="IdHangSP" />
+          <ScalarProperty Name="IdLoaiSP" ColumnName="IdLoaiSP" />
+          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+          <ScalarProperty Name="MoTaSP" ColumnName="MoTaSP" />
+          <ScalarProperty Name="Gia" ColumnName="Gia" />
+          <ScalarProperty Name="ImagePathMain" ColumnName="ImagePathMain" />
+          <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_TINHTRANGDH">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_TINHTRANGDH">
+        <MappingFragment StoreEntitySet="tb_TINHTRANGDH">
+          <ScalarProperty Name="IdTinhTrangDH" ColumnName="IdTinhTrangDH" />
+          <ScalarProperty Name="TenTinhTrang" ColumnName="TenTinhTrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_YKIEN">
+      <EntityTypeMapping TypeName="EcmMobileShopModel.tb_YKIEN">
+        <MappingFragment StoreEntitySet="tb_YKIEN">
+          <ScalarProperty Name="IdYK" ColumnName="IdYK" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="NgayYKien" ColumnName="NgayYKien" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

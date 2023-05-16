@@ -1,0 +1,83 @@
+﻿@model IEnumerable<EcmMobileShop.Models.tb_FEEDBACK>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Danh sách feedback cho sản phẩm</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <h2 style="text-align: center">THÔNG TIN FEEDBACK CHO SẢN PHẨM</h2>
+            <p>
+                @Html.ActionLink("TẠO FEEDBACK SẢN PHẨM", "Create", null, new { @class = "btn btn-primary" })
+            </p>
+            <thead>
+                <tr>
+                    <th>
+                       Nội dung
+                    </th>
+                    <th>
+                        Hình ảnh
+                    </th>
+                    <th>
+                        Ngày được feedback
+                    </th>
+                    <th>
+                        Tên sản phẩm
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Noidung)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Img)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayFB)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tb_CHITIETHOADON.TenSP)
+                        </td>
+                        <td>
+                           
+                            @Html.ActionLink("Edit", "Edit", new { id = item.IdFB }, new { @class = "btn btn-success" })
+                            @Html.ActionLink("Details", "Details", new { id = item.IdFB }, new { @class = "btn btn-primary" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.IdFB }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                        Nội dung
+                    </th>
+                    <th>
+                        Hình ảnh
+                    </th>
+                    <th>
+                        Ngày được feedback
+                    </th>
+                    <th>
+                        Tên sản phẩm
+                    </th>
+                    <th></th>
+                </tr>
+            </tfoot>
+
+            
+
+        </table>
+    </div>
+</div>

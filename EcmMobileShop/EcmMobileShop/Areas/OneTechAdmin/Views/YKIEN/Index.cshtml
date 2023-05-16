@@ -1,0 +1,85 @@
+﻿@model IEnumerable<EcmMobileShop.Models.tb_YKIEN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Danh sách ý kiến khách hàng</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <h2 style="text-align: center">Danh sách ý kiến</h2>
+            <p>
+                @Html.ActionLink("TẠO Ý KIẾN MỚI", "Create", null, new { @class = "btn btn-primary" })
+            </p>
+            <thead>
+                <tr>
+                    <th>
+                        Số điện thoại
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Ngày ý kiến
+                    </th>
+                    <th>
+                        Nội dung
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SDT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayYKien)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NoiDung)
+                        </td>
+                        <td>                          
+                            @*@Html.ActionLink("Edit", "Edit", new { id = item.IdYK }, new { @class = "btn btn-success" })*@
+                            @Html.ActionLink("Details", "Details", new { id = item.IdYK }, new { @class = "btn btn-primary" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.IdYK }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                        Số điện thoại
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Ngày ý kiến
+                    </th>
+                    <th>
+                        Nội dung
+                    </th>
+                    <th></th>
+                </tr>
+            </tfoot>
+            
+
+        </table>
+        
+    </div>
+</div>

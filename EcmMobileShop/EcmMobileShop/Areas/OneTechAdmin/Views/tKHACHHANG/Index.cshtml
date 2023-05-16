@@ -1,0 +1,79 @@
+﻿@model IEnumerable<EcmMobileShop.Models.tb_KHACHHANG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Danh sách khách hàng</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <h2 style="text-align: center">Bảng danh sách khách hàng</h2>
+            <thead>
+                <tr>
+                    <th>
+                        Tên khách hàng
+                    </th>
+                    <th>
+                        Địa chỉ
+                    </th>
+                    <th>
+                        Số điện thoại
+                    </th>
+                    <th>
+                        Trạng thái
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenKH)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DiaChi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SDT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TrangThai)
+                        </td>
+                        <td>
+                           
+                            @Html.ActionLink("Edit", "Edit", new { id = item.IdKH }, new { @class = "btn btn-success" })
+                            @Html.ActionLink("Details", "Details", new { id = item.IdKH }, new { @class = "btn btn-primary" })
+                            @*@Html.ActionLink("Delete", "Delete", new { id = item.IdKH }, new { @class = "btn btn-danger" })*@
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                        Tên khách hàng
+                    </th>
+                    <th>
+                        Địa chỉ
+                    </th>
+                    <th>
+                        Số điện thoại
+                    </th>
+                    <th>
+                        Trạng thái
+                    </th>
+                    <th></th>
+                </tr>
+            </tfoot>
+                      
+        </table>
+
+    </div>
+</div>

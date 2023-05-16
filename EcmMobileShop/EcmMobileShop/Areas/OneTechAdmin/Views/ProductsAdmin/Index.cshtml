@@ -1,0 +1,116 @@
+﻿@model IEnumerable<EcmMobileShop.Models.tb_SANPHAM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Danh sách sản phẩm</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <h2 style="text-align: center">THÔNG TIN SẢN PHẨM</h2>
+            <p>
+                @Html.ActionLink("TẠO MỚI", "Create", null, new { @class = "btn btn-primary" })
+            </p>
+            <thead>
+                <tr>
+                    <th>
+                        Tên Sản Phẩm
+                    </th>
+                    <th>
+                        Mô tả sản phẩm
+                    </th>
+                    <th>
+                        Giá
+                    </th>
+                    <th>
+                        Link hình ảnh
+                    </th>
+                    <th>
+                        Ngày nhập
+                    </th>
+                    <th>
+                        Trạng thái
+                    </th>
+                    <th>
+                       Tên hãng sản phẩm
+                    </th>
+                    <th>
+                       Tên loại sản phẩm
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenSP)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MoTaSP)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ImagePathMain)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayNhap)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TrangThai)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tb_HANGSP.TenHangSP)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tb_LOAISP.TenLoaiSP)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.IdSP }, new { @class = "btn btn-success" })
+                            @Html.ActionLink("Details", "Details", new { id = item.IdSP }, new { @class = "btn btn-primary" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.IdSP }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                        Tên Sản Phẩm
+                    </th>
+                    <th>
+                        Mô tả sản phẩm
+                    </th>
+                    <th>
+                        Giá
+                    </th>
+                    <th>
+                        Link hình ảnh
+                    </th>
+                    <th>
+                        Ngày nhập
+                    </th>
+                    <th>
+                        Trạng thái
+                    </th>
+                    <th>
+                        Tên hãng sản phẩm
+                    </th>
+                    <th>
+                        Tên loại sản phẩm
+                    </th>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+        

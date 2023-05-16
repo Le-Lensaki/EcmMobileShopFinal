@@ -1,0 +1,83 @@
+﻿@model IEnumerable<EcmMobileShop.Models.tb_BannerSP>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Danh sách banner slide sản phẩm</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <h2 style="text-align: center">Bảng danh sách banner slide sản phẩm</h2>
+            <p>
+                @Html.ActionLink("Tạo banner slide mới", "Create", null, new { @class = "btn btn-primary" })
+            </p>
+            <thead>
+                <tr>
+                    <th>
+                        Ngày hết hạn
+                    </th>
+                    <th>
+                        Tình trạng
+                    </th>
+                    <th>
+                        Link hình ảnh
+                    </th>
+                    <th>
+                        Tên sản phẩm
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayHH)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TinhTrang)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ImagePathDetail)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tb_SANPHAM.TenSP)
+                        </td>
+                        <td>
+                            
+
+                            @Html.ActionLink("Edit", "Edit", new { id = item.IdBannerSP }, new { @class = "btn btn-success" })
+                            @Html.ActionLink("Details", "Details", new { id = item.IdBannerSP }, new { @class = "btn btn-primary" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.IdBannerSP }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                        Ngày hết hạn
+                    </th>
+                    <th>
+                        Tình trạng
+                    </th>
+                    <th>
+                        Link hình ảnh
+                    </th>
+                    <th>
+                        Tên sản phẩm
+                    </th>
+                    <th></th>
+                </tr>
+            </tfoot>
+
+            
+        </table>
+    </div>
+</div>

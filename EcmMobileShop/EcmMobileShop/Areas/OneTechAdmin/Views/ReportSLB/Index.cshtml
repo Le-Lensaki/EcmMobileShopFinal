@@ -1,0 +1,72 @@
+﻿@model IEnumerable<EcmMobileShop.Models.ReportSLB>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Báo cáo doanh thu</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID Sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Tháng bán</th>
+                    <th>Năm bán</th>
+                    <th>Tổng số lượng bán</th>
+                    <th>Tổng doanh thu của sản phẩm</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdSP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenSP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Month)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Year)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Total)
+                    </td>
+                    <td>
+                        $@Html.DisplayFor(modelItem => item.TotalMoney)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Cập nhật", "Edit", new { id = item.IdHD }) |*@
+                        @Html.ActionLink("Chi tiết sản phẩm", "Details", "ProductsAdmin", new { id = item.IdSP }, new { @class = "btn btn-primary" })
+
+                    </td>
+                </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <<th>ID Sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Tháng bán</th>
+                    <th>Năm bán</th>
+                    <th>Tổng số lượng bán</th>
+                    <th>Tổng doanh thu của sản phẩm</th>
+                    <th></th>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+

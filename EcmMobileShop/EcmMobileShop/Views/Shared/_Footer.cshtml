@@ -1,0 +1,86 @@
+﻿@using EcmMobileShop.Models
+
+@model ModelCollection
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-3 footer_col">
+            <div class="footer_column footer_contact">
+                <div class="logo_container">
+                    <div class="logo"><a href="#">OneTech</a></div>
+                </div>
+                <div class="footer_title">Bạn cần hỗ trợ?</div>
+                <div class="footer_phone">+84 7171 6200</div>
+                <div class="footer_contact_text">
+                    <p>39/11 Nguyễn Ngọc Cung</p>
+                    <p>Phường 16, Quận 8, TP.HCM</p>
+                </div>
+                <div class="footer_social">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 offset-lg-2">
+            <div class="footer_column">
+                <div class="footer_title">Truy cập nhanh đến</div>
+                <ul class="footer_list">
+
+
+                    @{
+                        var loaiSP = (Model.GetModel<List<EcmMobileShop.Models.tb_LOAISP>>());
+                        foreach (var item in loaiSP)
+                        {
+                            <li>@Html.ActionLink(item.TenLoaiSP, "Shop", "Home")</li>
+                        }
+                        
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            <div class="footer_column">
+                <ul class="footer_list footer_list_2">
+                    <ul class="footer_list">
+                        
+                        @{
+                            var hangSP = (Model.GetModel<List<EcmMobileShop.Models.tb_HANGSP>>());
+                            var count = 0;
+                            foreach (var item in hangSP)
+                            {
+                                count++;
+                                if(count > 8)
+                                { break; }
+                            <li>@Html.ActionLink(item.TenHangSP, "Shop", "Home")</li>
+                            }
+                        }
+                    </ul>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            <div class="footer_column">
+                <div class="footer_title">Customer Care</div>
+                <ul class="footer_list">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><a href="#">Wish List</a></li>
+                    <li><a href="#">Customer Services</a></li>
+                    <li><a href="#">Returns / Exchange</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Product Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,89 @@
+﻿@model EcmMobileShop.Models.tb_SANPHAM
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tb_SANPHAM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePathMain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePathMain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_HANGSP.TenHangSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_HANGSP.TenHangSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_LOAISP.TenLoaiSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_LOAISP.TenLoaiSP)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        //@Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

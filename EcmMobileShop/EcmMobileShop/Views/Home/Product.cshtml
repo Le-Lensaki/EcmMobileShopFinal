@@ -1,0 +1,159 @@
+﻿
+@using EcmMobileShop.Models
+
+@model ModelCollection
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+    var product = (Model.GetModel<List<tb_SANPHAM>>())[0];
+
+    var listLoai = (Model.GetModel<List<tb_LOAISP>>());
+    var listHang = (Model.GetModel<List<tb_HANGSP>>());
+    var listctsp = (Model.GetModel<List<tb_CT_SANPHAM>>());
+    var listmau = (Model.GetModel<List<tb_MAUSAC>>());
+
+    var dcSP = (Model.GetModel<List<tb_DISCOUNTSP>>());
+
+    var mausac = 0;
+    foreach (var item in listctsp)
+    {
+        if(item.IdSP == product.IdSP)
+        {
+            mausac = item.IdMau;
+
+        }
+    }
+    double? newPrice = 0;
+    if(dcSP.Count > 0)
+    {
+        newPrice = dcSP[0].tb_SANPHAM.Gia * ((100 - dcSP[0].GiaTri) / 100);
+    }
+    
+}
+
+
+<link rel="stylesheet" type="text/css" href="~/Content/Styles/product_responsive.css">
+<link rel="stylesheet" type="text/css" href="~/Content/Styles/product_styles.css">
+<!-- Single Product -->
+
+<div class="single_product">
+    <div class="container">
+        <div class="row">
+
+            <!-- ~/Content/images -->
+            <div class="col-lg-2 order-lg-1 order-2">
+                <ul class="image_list">
+                    <li data-image="@product.ImagePathMain"><img src="@product.ImagePathMain" alt=""></li>
+                    @foreach (var item in listctsp)
+                    {
+                        if (item.ImagePathDetail != null)
+                        {
+                        <li data-image="@item.ImagePathDetail"><img src="@item.ImagePathDetail" alt=""></li>
+                        }
+                    }
+                </ul>
+            </div>
+
+            <!-- Selected Image -->
+            <div class="col-lg-5 order-lg-2 order-1">
+                <div class="image_selected"><img src="@product.ImagePathMain" alt=""></div>
+            </div>
+
+            <!-- Description -->
+            <div class="col-lg-5 order-3">
+                <div class="product_description">
+                    @foreach (var item in listLoai)
+                    {
+                        if (item.IdLoaiSP == product.IdLoaiSP)
+                        {
+                            <div class="product_category">@item.TenLoaiSP</div>
+                            break;
+                        }
+
+                    }
+                    <div class="product_name">
+                        @product.TenSP
+                    </div>
+                    <div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
+                    <div class="product_text"><p>@product.MoTaSP</p></div>
+                    <div class="order_info d-flex flex-row">
+                        <form action="#">
+                            <div class="clearfix" style="z-index: 1000;">
+
+                                <!-- Product Quantity -->
+                                <div class="product_quantity clearfix">
+                                    <span>Quantity: </span>
+                                    <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+                                    <div class="quantity_buttons">
+                                        <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+                                        <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+                                    </div>
+                                </div>
+
+                                <!-- Product Color -->
+                                <ul class="product_color">
+                                    <li>
+                                        <span>Color: </span>
+                                        <div class="color_mark_container"><div id="selected_color" class="color_mark" style="background-color: @listctsp[0].tb_MAUSAC.MaMau"></div></div>
+                                        <div class="color_dropdown_button"><i class="fas fa-chevron-down"></i></div>
+
+                                        <ul class="color_list">
+
+                                            @foreach (var mausacitem in listctsp)
+                                            {
+                                                <li><div class="color_mark" style="background: @mausacitem.tb_MAUSAC.MaMau;"></div></li>
+                                            }
+
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            @if (newPrice > 0)
+                            {
+                                <div class="product_price discount">$@newPrice<span>$@product.Gia</span></div>
+                            }
+                            else
+                            {
+                                <div class="product_price">$@product.Gia</div>
+                            }
+                            
+                            <div class="button_container">
+                                <button type="button" class="button cart_button">Thêm vào giỏ</button>
+                                <div class="product_fav"><i class="fas fa-heart"></i></div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    // Lấy các phần tử DOM cần sử dụng
+    var quantityInput = document.getElementById("quantity_input");
+    var selectedColor = document.getElementById("selected_color");
+    var addToCartButton = document.querySelector(".button.cart_button");
+    var productPrice = document.querySelector(".product_price");
+
+    // Lắng nghe sự kiện khi nút "Thêm vào giỏ" được click
+    addToCartButton.addEventListener("click", function () {
+        // Lấy giá trị số lượng và màu sắc
+        var quantity = quantityInput.value;
+        var color = selectedColor.style.backgroundColor;
+        // Lấy giá sản phẩm
+        var price = productPrice.innerText;
+        var start = price.indexOf("$") + 1;
+        var end = price.indexOf("$", start);
+        var priceValue = price.substring(start, end);
+
+        // Chuyển hướng đến trang "AddToCart" với các tham số số lượng, màu sắc, và giá sản phẩm
+        window.location.href = '@Url.Action("AddToCart", "Home")?ProductId=@product.IdSP&mausac=' + encodeURIComponent(color) + '&soluong=' + quantity + '&gia=' + priceValue;
+    });
+</script>

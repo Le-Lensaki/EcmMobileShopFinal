@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EcmMobileShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tb_Banner">
+    <Key>
+      <PropertyRef Name="IdBanner" />
+    </Key>
+    <Property Name="IdBanner" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayHH" Type="DateTime" Precision="3" />
+    <Property Name="ImagePathDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_BannerSP">
+    <Key>
+      <PropertyRef Name="IdBannerSP" />
+    </Key>
+    <Property Name="IdBannerSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSP" Type="Int32" Nullable="false" />
+    <Property Name="NgayHH" Type="DateTime" Precision="3" />
+    <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
+    <Property Name="ImagePathDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tb_SANPHAM" Relationship="Self.fk_SP_BannerSP" FromRole="tb_BannerSP" ToRole="tb_SANPHAM" />
+  </EntityType>
+  <EntityType Name="tb_CHITIETHOADON">
+    <Key>
+      <PropertyRef Name="IdctHD" />
+    </Key>
+    <Property Name="IdctHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdHD" Type="Int32" />
+    <Property Name="IdctSP" Type="Int32" />
+    <Property Name="TenSP" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuongBan" Type="Double" />
+    <Property Name="GiaBan" Type="Double" />
+    <NavigationProperty Name="tb_FEEDBACK" Relationship="Self.fk_CTHD_FB" FromRole="tb_CHITIETHOADON" ToRole="tb_FEEDBACK" />
+    <NavigationProperty Name="tb_CT_SANPHAM" Relationship="Self.fk_ctSP_CTHD" FromRole="tb_CHITIETHOADON" ToRole="tb_CT_SANPHAM" />
+    <NavigationProperty Name="tb_HOADON" Relationship="Self.fk_HD_CTHD" FromRole="tb_CHITIETHOADON" ToRole="tb_HOADON" />
+  </EntityType>
+  <EntityType Name="tb_CT_SANPHAM">
+    <Key>
+      <PropertyRef Name="IdctSP" />
+    </Key>
+    <Property Name="IdctSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSP" Type="Int32" />
+    <Property Name="SoLuongSP" Type="Int32" />
+    <Property Name="IdMau" Type="Int32" Nullable="false" />
+    <Property Name="ImagePathDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_CHITIETHOADON" Relationship="Self.fk_ctSP_CTHD" FromRole="tb_CT_SANPHAM" ToRole="tb_CHITIETHOADON" />
+    <NavigationProperty Name="tb_MAUSAC" Relationship="Self.fk_tb_CT_SANPHAM_tb_MAUSAC" FromRole="tb_CT_SANPHAM" ToRole="tb_MAUSAC" />
+    <NavigationProperty Name="tb_SANPHAM" Relationship="Self.fk_tb_CT_SANPHAM_tb_SANPHAM" FromRole="tb_CT_SANPHAM" ToRole="tb_SANPHAM" />
+  </EntityType>
+  <EntityType Name="tb_DISCOUNTKH">
+    <Key>
+      <PropertyRef Name="IdDCKH" />
+    </Key>
+    <Property Name="IdDCKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdKH" Type="Int32" Nullable="false" />
+    <Property Name="GiaTri" Type="Double" Nullable="false" />
+    <Property Name="NgayHH" Type="DateTime" Precision="3" />
+    <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tb_KHACHHANG" Relationship="Self.fk_KH_DC" FromRole="tb_DISCOUNTKH" ToRole="tb_KHACHHANG" />
+  </EntityType>
+  <EntityType Name="tb_DISCOUNTSP">
+    <Key>
+      <PropertyRef Name="IdDCSP" />
+    </Key>
+    <Property Name="IdDCSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSP" Type="Int32" Nullable="false" />
+    <Property Name="GiaTri" Type="Double" Nullable="false" />
+    <Property Name="NgayHH" Type="DateTime" Precision="3" />
+    <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tb_SANPHAM" Relationship="Self.fk_SP_DC" FromRole="tb_DISCOUNTSP" ToRole="tb_SANPHAM" />
+  </EntityType>
+  <EntityType Name="tb_DISCOUNTTIME">
+    <Key>
+      <PropertyRef Name="IdDCTime" />
+    </Key>
+    <Property Name="IdDCTime" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayHH" Type="DateTime" Precision="3" />
+    <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_FEEDBACK">
+    <Key>
+      <PropertyRef Name="IdFB" />
+    </Key>
+    <Property Name="IdFB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdctHD" Type="Int32" Nullable="false" />
+    <Property Name="Noidung" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayFB" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tb_CHITIETHOADON" Relationship="Self.fk_CTHD_FB" FromRole="tb_FEEDBACK" ToRole="tb_CHITIETHOADON" />
+  </EntityType>
+  <EntityType Name="tb_HANGSP">
+    <Key>
+      <PropertyRef Name="IdHangSP" />
+    </Key>
+    <Property Name="IdHangSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenHangSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tb_SANPHAM" Relationship="Self.fk_tb_SANPHAM_tb_HANGSP" FromRole="tb_HANGSP" ToRole="tb_SANPHAM" />
+  </EntityType>
+  <EntityType Name="tb_HOADON">
+    <Key>
+      <PropertyRef Name="IdHD" />
+    </Key>
+    <Property Name="IdHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTinhTrangDH" Type="Int32" />
+    <Property Name="IdKH" Type="Int32" />
+    <Property Name="DiaChiGiao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NgayLap" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tb_CHITIETHOADON" Relationship="Self.fk_HD_CTHD" FromRole="tb_HOADON" ToRole="tb_CHITIETHOADON" />
+    <NavigationProperty Name="tb_KHACHHANG" Relationship="Self.fk_KH_HD" FromRole="tb_HOADON" ToRole="tb_KHACHHANG" />
+    <NavigationProperty Name="tb_TINHTRANGDH" Relationship="Self.fk_TT_HD" FromRole="tb_HOADON" ToRole="tb_TINHTRANGDH" />
+  </EntityType>
+  <EntityType Name="tb_KHACHHANG">
+    <Key>
+      <PropertyRef Name="IdKH" />
+    </Key>
+    <Property Name="IdKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tb_DISCOUNTKH" Relationship="Self.fk_KH_DC" FromRole="tb_KHACHHANG" ToRole="tb_DISCOUNTKH" />
+    <NavigationProperty Name="tb_HOADON" Relationship="Self.fk_KH_HD" FromRole="tb_KHACHHANG" ToRole="tb_HOADON" />
+  </EntityType>
+  <EntityType Name="tb_LOAISP">
+    <Key>
+      <PropertyRef Name="IdLoaiSP" />
+    </Key>
+    <Property Name="IdLoaiSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tb_SANPHAM" Relationship="Self.fk_tb_SANPHAM_tb_LOAISP" FromRole="tb_LOAISP" ToRole="tb_SANPHAM" />
+  </EntityType>
+  <EntityType Name="tb_MAUSAC">
+    <Key>
+      <PropertyRef Name="IdMau" />
+    </Key>
+    <Property Name="IdMau" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaMau" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TenMau" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_CT_SANPHAM" Relationship="Self.fk_tb_CT_SANPHAM_tb_MAUSAC" FromRole="tb_MAUSAC" ToRole="tb_CT_SANPHAM" />
+  </EntityType>
+  <EntityType Name="tb_SANPHAM">
+    <Key>
+      <PropertyRef Name="IdSP" />
+    </Key>
+    <Property Name="IdSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdHangSP" Type="Int32" />
+    <Property Name="IdLoaiSP" Type="Int32" />
+    <Property Name="TenSP" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MoTaSP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Gia" Type="Double" />
+    <Property Name="ImagePathMain" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayNhap" Type="DateTime" Precision="3" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tb_BannerSP" Relationship="Self.fk_SP_BannerSP" FromRole="tb_SANPHAM" ToRole="tb_BannerSP" />
+    <NavigationProperty Name="tb_CT_SANPHAM" Relationship="Self.fk_tb_CT_SANPHAM_tb_SANPHAM" FromRole="tb_SANPHAM" ToRole="tb_CT_SANPHAM" />
+    <NavigationProperty Name="tb_DISCOUNTSP" Relationship="Self.fk_SP_DC" FromRole="tb_SANPHAM" ToRole="tb_DISCOUNTSP" />
+    <NavigationProperty Name="tb_HANGSP" Relationship="Self.fk_tb_SANPHAM_tb_HANGSP" FromRole="tb_SANPHAM" ToRole="tb_HANGSP" />
+    <NavigationProperty Name="tb_LOAISP" Relationship="Self.fk_tb_SANPHAM_tb_LOAISP" FromRole="tb_SANPHAM" ToRole="tb_LOAISP" />
+  </EntityType>
+  <EntityType Name="tb_TINHTRANGDH">
+    <Key>
+      <PropertyRef Name="IdTinhTrangDH" />
+    </Key>
+    <Property Name="IdTinhTrangDH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTinhTrang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_HOADON" Relationship="Self.fk_TT_HD" FromRole="tb_TINHTRANGDH" ToRole="tb_HOADON" />
+  </EntityType>
+  <EntityType Name="tb_YKIEN">
+    <Key>
+      <PropertyRef Name="IdYK" />
+    </Key>
+    <Property Name="IdYK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SDT" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NgayYKien" Type="DateTime" Precision="3" />
+    <Property Name="NoiDung" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="fk_SP_BannerSP">
+    <End Role="tb_SANPHAM" Type="Self.tb_SANPHAM" Multiplicity="1" />
+    <End Role="tb_BannerSP" Type="Self.tb_BannerSP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_SANPHAM">
+        <PropertyRef Name="IdSP" />
+      </Principal>
+      <Dependent Role="tb_BannerSP">
+        <PropertyRef Name="IdSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CTHD_FB">
+    <End Role="tb_CHITIETHOADON" Type="Self.tb_CHITIETHOADON" Multiplicity="1" />
+    <End Role="tb_FEEDBACK" Type="Self.tb_FEEDBACK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_CHITIETHOADON">
+        <PropertyRef Name="IdctHD" />
+      </Principal>
+      <Dependent Role="tb_FEEDBACK">
+        <PropertyRef Name="IdctHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ctSP_CTHD">
+    <End Role="tb_CT_SANPHAM" Type="Self.tb_CT_SANPHAM" Multiplicity="0..1" />
+    <End Role="tb_CHITIETHOADON" Type="Self.tb_CHITIETHOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_CT_SANPHAM">
+        <PropertyRef Name="IdctSP" />
+      </Principal>
+      <Dependent Role="tb_CHITIETHOADON">
+        <PropertyRef Name="IdctSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_HD_CTHD">
+    <End Role="tb_HOADON" Type="Self.tb_HOADON" Multiplicity="0..1" />
+    <End Role="tb_CHITIETHOADON" Type="Self.tb_CHITIETHOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_HOADON">
+        <PropertyRef Name="IdHD" />
+      </Principal>
+      <Dependent Role="tb_CHITIETHOADON">
+        <PropertyRef Name="IdHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_CT_SANPHAM_tb_MAUSAC">
+    <End Role="tb_MAUSAC" Type="Self.tb_MAUSAC" Multiplicity="1" />
+    <End Role="tb_CT_SANPHAM" Type="Self.tb_CT_SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_MAUSAC">
+        <PropertyRef Name="IdMau" />
+      </Principal>
+      <Dependent Role="tb_CT_SANPHAM">
+        <PropertyRef Name="IdMau" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_CT_SANPHAM_tb_SANPHAM">
+    <End Role="tb_SANPHAM" Type="Self.tb_SANPHAM" Multiplicity="0..1" />
+    <End Role="tb_CT_SANPHAM" Type="Self.tb_CT_SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_SANPHAM">
+        <PropertyRef Name="IdSP" />
+      </Principal>
+      <Dependent Role="tb_CT_SANPHAM">
+        <PropertyRef Name="IdSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_KH_DC">
+    <End Role="tb_KHACHHANG" Type="Self.tb_KHACHHANG" Multiplicity="1" />
+    <End Role="tb_DISCOUNTKH" Type="Self.tb_DISCOUNTKH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_KHACHHANG">
+        <PropertyRef Name="IdKH" />
+      </Principal>
+      <Dependent Role="tb_DISCOUNTKH">
+        <PropertyRef Name="IdKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_SP_DC">
+    <End Role="tb_SANPHAM" Type="Self.tb_SANPHAM" Multiplicity="1" />
+    <End Role="tb_DISCOUNTSP" Type="Self.tb_DISCOUNTSP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_SANPHAM">
+        <PropertyRef Name="IdSP" />
+      </Principal>
+      <Dependent Role="tb_DISCOUNTSP">
+        <PropertyRef Name="IdSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_SANPHAM_tb_HANGSP">
+    <End Role="tb_HANGSP" Type="Self.tb_HANGSP" Multiplicity="0..1" />
+    <End Role="tb_SANPHAM" Type="Self.tb_SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_HANGSP">
+        <PropertyRef Name="IdHangSP" />
+      </Principal>
+      <Dependent Role="tb_SANPHAM">
+        <PropertyRef Name="IdHangSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_KH_HD">
+    <End Role="tb_KHACHHANG" Type="Self.tb_KHACHHANG" Multiplicity="0..1" />
+    <End Role="tb_HOADON" Type="Self.tb_HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_KHACHHANG">
+        <PropertyRef Name="IdKH" />
+      </Principal>
+      <Dependent Role="tb_HOADON">
+        <PropertyRef Name="IdKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TT_HD">
+    <End Role="tb_TINHTRANGDH" Type="Self.tb_TINHTRANGDH" Multiplicity="0..1" />
+    <End Role="tb_HOADON" Type="Self.tb_HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_TINHTRANGDH">
+        <PropertyRef Name="IdTinhTrangDH" />
+      </Principal>
+      <Dependent Role="tb_HOADON">
+        <PropertyRef Name="IdTinhTrangDH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_SANPHAM_tb_LOAISP">
+    <End Role="tb_LOAISP" Type="Self.tb_LOAISP" Multiplicity="0..1" />
+    <End Role="tb_SANPHAM" Type="Self.tb_SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_LOAISP">
+        <PropertyRef Name="IdLoaiSP" />
+      </Principal>
+      <Dependent Role="tb_SANPHAM">
+        <PropertyRef Name="IdLoaiSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EcmMobileShopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_Banner" EntityType="Self.tb_Banner" />
+    <EntitySet Name="tb_BannerSP" EntityType="Self.tb_BannerSP" />
+    <EntitySet Name="tb_CHITIETHOADON" EntityType="Self.tb_CHITIETHOADON" />
+    <EntitySet Name="tb_CT_SANPHAM" EntityType="Self.tb_CT_SANPHAM" />
+    <EntitySet Name="tb_DISCOUNTKH" EntityType="Self.tb_DISCOUNTKH" />
+    <EntitySet Name="tb_DISCOUNTSP" EntityType="Self.tb_DISCOUNTSP" />
+    <EntitySet Name="tb_DISCOUNTTIME" EntityType="Self.tb_DISCOUNTTIME" />
+    <EntitySet Name="tb_FEEDBACK" EntityType="Self.tb_FEEDBACK" />
+    <EntitySet Name="tb_HANGSP" EntityType="Self.tb_HANGSP" />
+    <EntitySet Name="tb_HOADON" EntityType="Self.tb_HOADON" />
+    <EntitySet Name="tb_KHACHHANG" EntityType="Self.tb_KHACHHANG" />
+    <EntitySet Name="tb_LOAISP" EntityType="Self.tb_LOAISP" />
+    <EntitySet Name="tb_MAUSAC" EntityType="Self.tb_MAUSAC" />
+    <EntitySet Name="tb_SANPHAM" EntityType="Self.tb_SANPHAM" />
+    <EntitySet Name="tb_TINHTRANGDH" EntityType="Self.tb_TINHTRANGDH" />
+    <EntitySet Name="tb_YKIEN" EntityType="Self.tb_YKIEN" />
+    <AssociationSet Name="fk_SP_BannerSP" Association="Self.fk_SP_BannerSP">
+      <End Role="tb_SANPHAM" EntitySet="tb_SANPHAM" />
+      <End Role="tb_BannerSP" EntitySet="tb_BannerSP" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CTHD_FB" Association="Self.fk_CTHD_FB">
+      <End Role="tb_CHITIETHOADON" EntitySet="tb_CHITIETHOADON" />
+      <End Role="tb_FEEDBACK" EntitySet="tb_FEEDBACK" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ctSP_CTHD" Association="Self.fk_ctSP_CTHD">
+      <End Role="tb_CT_SANPHAM" EntitySet="tb_CT_SANPHAM" />
+      <End Role="tb_CHITIETHOADON" EntitySet="tb_CHITIETHOADON" />
+    </AssociationSet>
+    <AssociationSet Name="fk_HD_CTHD" Association="Self.fk_HD_CTHD">
+      <End Role="tb_HOADON" EntitySet="tb_HOADON" />
+      <End Role="tb_CHITIETHOADON" EntitySet="tb_CHITIETHOADON" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_CT_SANPHAM_tb_MAUSAC" Association="Self.fk_tb_CT_SANPHAM_tb_MAUSAC">
+      <End Role="tb_MAUSAC" EntitySet="tb_MAUSAC" />
+      <End Role="tb_CT_SANPHAM" EntitySet="tb_CT_SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_CT_SANPHAM_tb_SANPHAM" Association="Self.fk_tb_CT_SANPHAM_tb_SANPHAM">
+      <End Role="tb_SANPHAM" EntitySet="tb_SANPHAM" />
+      <End Role="tb_CT_SANPHAM" EntitySet="tb_CT_SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="fk_KH_DC" Association="Self.fk_KH_DC">
+      <End Role="tb_KHACHHANG" EntitySet="tb_KHACHHANG" />
+      <End Role="tb_DISCOUNTKH" EntitySet="tb_DISCOUNTKH" />
+    </AssociationSet>
+    <AssociationSet Name="fk_SP_DC" Association="Self.fk_SP_DC">
+      <End Role="tb_SANPHAM" EntitySet="tb_SANPHAM" />
+      <End Role="tb_DISCOUNTSP" EntitySet="tb_DISCOUNTSP" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_SANPHAM_tb_HANGSP" Association="Self.fk_tb_SANPHAM_tb_HANGSP">
+      <End Role="tb_HANGSP" EntitySet="tb_HANGSP" />
+      <End Role="tb_SANPHAM" EntitySet="tb_SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="fk_KH_HD" Association="Self.fk_KH_HD">
+      <End Role="tb_KHACHHANG" EntitySet="tb_KHACHHANG" />
+      <End Role="tb_HOADON" EntitySet="tb_HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TT_HD" Association="Self.fk_TT_HD">
+      <End Role="tb_TINHTRANGDH" EntitySet="tb_TINHTRANGDH" />
+      <End Role="tb_HOADON" EntitySet="tb_HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_SANPHAM_tb_LOAISP" Association="Self.fk_tb_SANPHAM_tb_LOAISP">
+      <End Role="tb_LOAISP" EntitySet="tb_LOAISP" />
+      <End Role="tb_SANPHAM" EntitySet="tb_SANPHAM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

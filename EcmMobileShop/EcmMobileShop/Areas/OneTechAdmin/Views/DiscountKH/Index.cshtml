@@ -1,0 +1,83 @@
+﻿@model IEnumerable<EcmMobileShop.Models.tb_DISCOUNTKH>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/OneTechAdmin/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Danh sách giảm giá khách hàng</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <h2 style="text-align: center">THÔNG TIN GIẢM GIÁ CHO KHÁCH HÀNG</h2>
+            <p>
+                @Html.ActionLink("TẠO GIẢM GIÁ MỚI KHÁCH HÀNG", "Create", null, new { @class = "btn btn-primary" })
+            </p>
+            <thead>
+                <tr>
+                    <th>
+                       Giá trị giảm (Theo %)
+                    </th>
+                    <th>
+                        Ngày hết hạn
+                    </th>
+                    <th>
+                        Tình trạng
+                    </th>
+                    <th>
+                        Tên khách hàng
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GiaTri)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayHH)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TinhTrang)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tb_KHACHHANG.TenKH)
+                        </td>
+                        <td>
+                            
+                            @Html.ActionLink("Edit", "Edit", new { id = item.IdDCKH }, new { @class = "btn btn-success" })
+                            @Html.ActionLink("Details", "Details", new { id = item.IdDCKH }, new { @class = "btn btn-primary" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.IdDCKH }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                        Giá trị giảm (Theo %)
+                    </th>
+                    <th>
+                        Ngày hết hạn
+                    </th>
+                    <th>
+                        Tình trạng
+                    </th>
+                    <th>
+                        Tên khách hàng
+                    </th>
+                    <th></th>
+                </tr>
+            </tfoot>
+
+            
+
+        </table>
+    </div>
+</div>

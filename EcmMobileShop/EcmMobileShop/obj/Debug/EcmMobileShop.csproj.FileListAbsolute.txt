@@ -1,0 +1,548 @@
+D:\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.dll.config
+D:\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.dll
+D:\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.pdb
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.exe
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.exe.config
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.rsp
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.exe
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.exe.config
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.rsp
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Managed.Core.targets
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.AppContext.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Collections.Immutable.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Console.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Globalization.Calendars.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.Compression.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.FileSystem.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Net.Http.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Net.Sockets.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Reflection.Metadata.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.ValueTuple.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XmlDocument.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XPath.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.exe
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.exe.config
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.rsp
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\VBCSCompiler.exe
+D:\EcmMobileShop\EcmMobileShop\bin\roslyn\VBCSCompiler.exe.config
+D:\EcmMobileShop\EcmMobileShop\bin\Antlr3.Runtime.dll
+D:\EcmMobileShop\EcmMobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\EcmMobileShop\EcmMobileShop\bin\Microsoft.Web.Infrastructure.dll
+D:\EcmMobileShop\EcmMobileShop\bin\Newtonsoft.Json.dll
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.Helpers.dll
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.Mvc.dll
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.Optimization.dll
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.Razor.dll
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Deployment.dll
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.dll
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Razor.dll
+D:\EcmMobileShop\EcmMobileShop\bin\WebGrease.dll
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.Helpers.xml
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.Mvc.xml
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.Optimization.xml
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.Razor.xml
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.xml
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Deployment.xml
+D:\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Razor.xml
+D:\EcmMobileShop\EcmMobileShop\bin\Newtonsoft.Json.xml
+D:\EcmMobileShop\EcmMobileShop\bin\Antlr3.Runtime.pdb
+D:\EcmMobileShop\EcmMobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.AssemblyReference.cache
+D:\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.CoreCompileInputs.cache
+D:\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.CopyComplete
+D:\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.dll
+D:\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.pdb
+D:\EcmMobileShop\EcmMobileShop\bin\EntityFramework.dll
+D:\EcmMobileShop\EcmMobileShop\bin\EntityFramework.SqlServer.dll
+D:\EcmMobileShop\EcmMobileShop\bin\EntityFramework.xml
+D:\EcmMobileShop\EcmMobileShop\bin\EntityFramework.SqlServer.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.dll.config
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.pdb
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.exe
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.exe.config
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.rsp
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.exe
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.exe.config
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.rsp
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.AppContext.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Console.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Net.Http.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.exe
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.exe.config
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.rsp
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Antlr3.Runtime.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\EntityFramework.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\EntityFramework.SqlServer.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Newtonsoft.Json.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\PagedList.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\PagedList.Mvc.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.Helpers.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.Mvc.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.Optimization.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.Razor.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\WebGrease.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\EntityFramework.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\EntityFramework.SqlServer.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\PagedList.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\PagedList.Mvc.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.Helpers.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.Mvc.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.Optimization.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.Razor.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Newtonsoft.Json.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Antlr3.Runtime.pdb
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.AssemblyReference.cache
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.pdb
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Firebase.Auth.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Owin.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\FireSharp.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Extensions.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Primitives.dll
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Extensions.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Primitives.xml
+C:\Users\Dell\Downloads\EcmMobileShop (1)\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.App.config
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.dll.config
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.pdb
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.exe
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.exe.config
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.rsp
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.exe
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.exe.config
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.rsp
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.AppContext.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Collections.Immutable.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Console.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Globalization.Calendars.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.Compression.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.FileSystem.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Net.Http.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Net.Sockets.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Reflection.Metadata.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.ValueTuple.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XPath.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.exe
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.exe.config
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.rsp
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\VBCSCompiler.exe
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\roslyn\VBCSCompiler.exe.config
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Antlr3.Runtime.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\EntityFramework.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\EntityFramework.SqlServer.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Firebase.Auth.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\FireSharp.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Newtonsoft.Json.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Owin.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\PagedList.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\PagedList.Mvc.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Extensions.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Primitives.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.Helpers.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.Mvc.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.Optimization.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.Razor.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Deployment.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Razor.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\WebGrease.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\EntityFramework.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\EntityFramework.SqlServer.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\PagedList.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\PagedList.Mvc.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Extensions.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Primitives.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.Helpers.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.Mvc.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.Optimization.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.Razor.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Deployment.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Razor.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Newtonsoft.Json.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Antlr3.Runtime.pdb
+D:\Bài học\EcmMobileShop\EcmMobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Bài học\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.App.config
+D:\Bài học\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.AssemblyReference.cache
+D:\Bài học\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.CoreCompileInputs.cache
+D:\Bài học\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.CopyComplete
+D:\Bài học\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.dll
+D:\Bài học\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.pdb
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.dll.config
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.pdb
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.exe
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.exe.config
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.rsp
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.exe
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.exe.config
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.rsp
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Managed.Core.targets
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.AppContext.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Collections.Immutable.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Console.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Globalization.Calendars.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.Compression.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.FileSystem.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Net.Http.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Net.Sockets.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Reflection.Metadata.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.ValueTuple.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XmlDocument.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XPath.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.exe
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.exe.config
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.rsp
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\VBCSCompiler.exe
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\VBCSCompiler.exe.config
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Antlr3.Runtime.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EntityFramework.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EntityFramework.SqlServer.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Firebase.Auth.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\FireSharp.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Core.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.Cookies.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.OAuth.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Web.Infrastructure.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Newtonsoft.Json.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Owin.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\PagedList.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\PagedList.Mvc.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Diagnostics.DiagnosticSource.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Extensions.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Primitives.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Helpers.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Mvc.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Optimization.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Razor.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Deployment.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Razor.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\WebGrease.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EntityFramework.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EntityFramework.SqlServer.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Core.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.Cookies.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.OAuth.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\PagedList.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\PagedList.Mvc.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Diagnostics.DiagnosticSource.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Extensions.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Primitives.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Helpers.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Mvc.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Optimization.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Razor.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Deployment.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Razor.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Newtonsoft.Json.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Antlr3.Runtime.pdb
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.App.config
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.AssemblyReference.cache
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.CoreCompileInputs.cache
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.CopyComplete
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.dll
+E:\EcmMobileShop\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.pdb
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.dll.config
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EcmMobileShop.pdb
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.exe
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.exe.config
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csc.rsp
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.exe
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.exe.config
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\csi.rsp
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Managed.Core.targets
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.AppContext.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Collections.Immutable.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Console.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Globalization.Calendars.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.Compression.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.FileSystem.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Net.Http.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Net.Sockets.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Reflection.Metadata.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.ValueTuple.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XmlDocument.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XPath.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.exe
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.exe.config
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\vbc.rsp
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\VBCSCompiler.exe
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\roslyn\VBCSCompiler.exe.config
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Antlr3.Runtime.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EntityFramework.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EntityFramework.SqlServer.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Firebase.Auth.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\FireSharp.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Core.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.Cookies.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.OAuth.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Web.Infrastructure.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Newtonsoft.Json.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Owin.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\PagedList.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\PagedList.Mvc.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Diagnostics.DiagnosticSource.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Extensions.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Primitives.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Helpers.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Mvc.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Optimization.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Razor.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Deployment.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Razor.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\WebGrease.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EntityFramework.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\EntityFramework.SqlServer.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Core.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.Cookies.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Owin.Security.OAuth.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\PagedList.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\PagedList.Mvc.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Diagnostics.DiagnosticSource.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Extensions.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Net.Http.Primitives.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Helpers.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Mvc.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Optimization.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.Razor.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Deployment.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\System.Web.WebPages.Razor.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Newtonsoft.Json.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Antlr3.Runtime.pdb
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.App.config
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.CoreCompileInputs.cache
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.dll
+D:\EcmMobileShop\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.pdb

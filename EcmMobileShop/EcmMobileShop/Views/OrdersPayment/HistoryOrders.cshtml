@@ -1,0 +1,61 @@
+﻿@model IEnumerable<EcmMobileShop.Models.tb_HOADON>
+
+@using EcmMobileShop.Models
+@{
+    ViewBag.Title = "HistoryOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link rel="stylesheet" type="text/css" href="~/Content/Styles/history_order.css">
+<div class="card">
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DiaChiGiao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NgayLap)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.tb_KHACHHANG.TenKH)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.tb_TINHTRANGDH.TenTinhTrang)
+                </th>
+                <th></th>
+            </tr>
+            @if (Model == null)
+            {
+            }
+            else
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DiaChiGiao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayLap)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tb_KHACHHANG.TenKH)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tb_TINHTRANGDH.TenTinhTrang)
+                        </td>
+                        <td>
+                            
+                            @Html.ActionLink("Details", "Details", new { ordersID = item.IdHD }, new { @class = "btn btn-primary" })
+                            
+                        </td>
+                    </tr>
+                }
+            }
+
+        </table>
+    </div>
+</div>
+
