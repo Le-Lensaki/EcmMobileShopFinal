@@ -197,9 +197,15 @@
         var color = selectedColor.style.backgroundColor;
         // Lấy giá sản phẩm
         var price = productPrice.innerText;
+       
         var start = price.indexOf("$") + 1;
         var end = price.indexOf("$", start);
-        var priceValue = price.substring(start, end);
+        var priceValue;
+        if (end !== -1) {
+            priceValue = price.substring(start, end);
+        } else {
+            priceValue = price.substring(start);
+        }
 
         // Chuyển hướng đến trang "AddToCart" với các tham số số lượng, màu sắc, và giá sản phẩm
         window.location.href = '@Url.Action("AddToCart", "Home")?ProductId=@product.IdSP&mausac=' + encodeURIComponent(color) + '&soluong=' + quantity + '&gia=' + priceValue;

@@ -205,17 +205,24 @@ namespace EcmMobileShop.Controllers
         }
         public async void dangky(SignUpModel model)
         {
-            var auth = new FirebaseAuthProvider(new Firebase.Auth.FirebaseConfig(ApiKey));
+            try
+            {
+                var auth = new FirebaseAuthProvider(new Firebase.Auth.FirebaseConfig(ApiKey));
 
-            var a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
-            tb_KHACHHANG kh = new tb_KHACHHANG();
-            kh.TenKH = model.Name;
-            kh.DiaChi = model.Diachi;
-            kh.SDT = model.SDT;
-            kh.TrangThai = true;
-            ecmMobile.tb_KHACHHANG.Add(kh);
-            ecmMobile.SaveChanges();
-            AddKhachHangToFirebase(model);
+                var a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
+                tb_KHACHHANG kh = new tb_KHACHHANG();
+                kh.TenKH = model.Name;
+                kh.DiaChi = model.Diachi;
+                kh.SDT = model.SDT;
+                kh.TrangThai = true;
+                ecmMobile.tb_KHACHHANG.Add(kh);
+                ecmMobile.SaveChanges();
+                AddKhachHangToFirebase(model);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
 

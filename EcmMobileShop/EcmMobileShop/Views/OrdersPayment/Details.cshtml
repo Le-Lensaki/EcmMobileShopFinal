@@ -7,7 +7,7 @@
 
     tb_CHITIETHOADON cthd = Model.SingleOrDefault(kh => kh.tb_HOADON.IdTinhTrangDH == 5);
 
-    int? idkh = Model.SingleOrDefault(kh => kh.GiaBan > 0).tb_HOADON.IdKH;
+    int? idkh = Model.Last(kh => kh.GiaBan > 0).tb_HOADON.IdKH;
 }
 
 <link rel="stylesheet" type="text/css" href="~/Content/Styles/history_order.css">

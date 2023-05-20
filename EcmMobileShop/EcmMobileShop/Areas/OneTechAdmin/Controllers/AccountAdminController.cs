@@ -174,31 +174,31 @@ namespace EcmMobileShop.Areas.OneTechAdmin.Controllers
             return View(signUpModel);
         }
 
-        // GET: OneTechAdmin/AccountAdmin/Delete/5
-        public ActionResult Delete(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            SignUpModel signUpModel = db.SignUpModels.Find(id);
-            if (signUpModel == null)
-            {
-                return HttpNotFound();
-            }
-            return View(signUpModel);
-        }
+        //// GET: OneTechAdmin/AccountAdmin/Delete/5
+        //public ActionResult Delete(string id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    SignUpModel signUpModel = db.SignUpModels.Find(id);
+        //    if (signUpModel == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(signUpModel);
+        //}
 
-        // POST: OneTechAdmin/AccountAdmin/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
-        {
-            SignUpModel signUpModel = db.SignUpModels.Find(id);
-            db.SignUpModels.Remove(signUpModel);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        //// POST: OneTechAdmin/AccountAdmin/Delete/5
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(string id)
+        //{
+        //    SignUpModel signUpModel = db.SignUpModels.Find(id);
+        //    db.SignUpModels.Remove(signUpModel);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
 
         protected override void Dispose(bool disposing)
         {
