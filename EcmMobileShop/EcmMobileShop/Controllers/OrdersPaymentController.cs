@@ -1,4 +1,5 @@
 ﻿using EcmMobileShop.Models;
+using PayPal.Api;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace EcmMobileShop.Controllers
                 var nameClaim = user.FindFirst(ClaimTypes.Name);
                 string name = nameClaim != null ? nameClaim.Value : "";
                 // Thực hiện đặt hàng với thông tin từ User.Identity
-                Orders(name, phone, address);
+                Orders(name, phone, address,1);
                 return RedirectToAction("Cart", "Home");
             }
             tb_KHACHHANG model = new tb_KHACHHANG();
@@ -44,8 +45,9 @@ namespace EcmMobileShop.Controllers
             {               
                 if (ModelState.IsValid)
                 {
-                    Orders(model.TenKH, model.SDT, model.DiaChi);
-                    return RedirectToAction("Cart", "Home");
+
+                    Orders(model.TenKH, model.SDT, model.DiaChi,1);
+                    return View("SuccessView");
                 }
                 else
                 {
@@ -61,7 +63,11 @@ namespace EcmMobileShop.Controllers
             // If we got this far, something failed, redisplay form
             return this.View(model);
         }
-        public void Orders(string hoten,string sdt,string diachi)
+
+
+
+
+        public void Orders(string hoten,string sdt,string diachi,int tinhtranghd)
         {
             List<CartItem> shoppingCart = Session["ShoppingCart"] as List<CartItem>;
             tb_KHACHHANG kh = ecmMobile.tb_KHACHHANG.SingleOrDefault(k => k.TenKH == hoten && k.SDT == sdt && k.TrangThai == true);
@@ -75,7 +81,7 @@ namespace EcmMobileShop.Controllers
             tb_HOADON hd = new tb_HOADON();
             hd.tb_KHACHHANG = kh;
             hd.NgayLap = DateTime.Now;
-            hd.IdTinhTrangDH = 1;
+            hd.IdTinhTrangDH = tinhtranghd;
             hd.DiaChiGiao = diachi;
             ecmMobile.tb_HOADON.Add(hd);
             ecmMobile.SaveChanges();
@@ -96,6 +102,8 @@ namespace EcmMobileShop.Controllers
                 cthd.GiaBan = item.Gia;
                 ecmMobile.tb_CHITIETHOADON.Add(cthd);
 
+                ctsp.SoLuongSP -= item.SoLuong;
+
             }
             ecmMobile.SaveChanges();
 
@@ -103,7 +111,186 @@ namespace EcmMobileShop.Controllers
             Session["ShoppingCart"] = null;
            
         }
-        
+        public ActionResult PaymentWithPaypal()
+        {
+            
+            if (User.Identity.IsAuthenticated) // Kiểm tra xem User đã đăng nhập hay chưa
+            {
+            
+
+                //getting the apiContext  
+                APIContext apiContext = PaypalConfiguration.GetAPIContext();
+                var user = User.Identity as ClaimsIdentity;
+                var addressClaim = user.FindFirst(ClaimTypes.StreetAddress);
+                string address = addressClaim != null ? addressClaim.Value : "";
+
+                // Lấy thông tin số điện thoại của user
+                var phoneClaim = user.FindFirst(ClaimTypes.MobilePhone);
+                string phone = phoneClaim != null ? phoneClaim.Value : "";
+
+                // Lấy thông tin số điện thoại của user
+                var nameClaim = user.FindFirst(ClaimTypes.Name);
+                string name = nameClaim != null ? nameClaim.Value : "";
+                // Thực hiện đặt hàng với thông tin từ User.Identity
+
+
+                try
+                {
+                    //A resource representing a Payer that funds a payment Payment Method as paypal  
+                    //Payer Id will be returned when payment proceeds or click to pay  
+                    string payerId = Request.Params["PayerID"];
+                    if (string.IsNullOrEmpty(payerId))
+                    {
+
+                        return Redirect(pay(name, phone, address, apiContext));
+                    }
+                    else
+                    {
+                        // This function exectues after receving all parameters for the payment  
+                        var guid = Request.Params["guid"];
+                        var executedPayment = ExecutePayment(apiContext, payerId, Session[guid] as string);
+                        //If executed payment failed then we will show payment failure message to user  
+                        if (executedPayment.state.ToLower() != "approved")
+                        {
+                            return View("FailureView");
+                        }
+                    }
+                    Orders(name, phone, address, 3);
+                    return View("SuccessView");
+                    //userDao.ChangeVip(Convert.ToInt32(session.UserID));
+                    //on successful payment, show success page to user.      
+                }
+                catch (Exception ex)
+                {
+                    return View("FailureView");
+                }
+            }
+            tb_KHACHHANG model = new tb_KHACHHANG();
+            return View(model);
+        }
+
+
+
+
+        private string pay(string hoten, string sdt, string diachi, APIContext apiContext)
+        {
+            //this section will be executed first because PayerID doesn't exist  
+            //it is returned by the create function call of the payment class  
+            // Creating a payment  
+            // baseURL is the url on which paypal sendsback the data.  
+            string baseURI = Request.Url.Scheme + "://" + Request.Url.Authority + "/OrdersPayment/PaymentWithPayPal?";
+            //here we are generating guid for storing the paymentID received in session  
+            //which will be used in the payment execution  
+            var guid = Convert.ToString((new Random()).Next(100000));
+            //CreatePayment function gives us the payment approval url  
+            //on which payer is redirected for paypal account payment  
+            var createdPayment = this.CreatePayment(hoten, sdt, diachi, apiContext, baseURI + "guid=" + guid);
+            //get links returned from paypal in response to Create function call  
+            var links = createdPayment.links.GetEnumerator();
+            string paypalRedirectUrl = null;
+            while (links.MoveNext())
+            {
+                Links lnk = links.Current;
+                if (lnk.rel.ToLower().Trim().Equals("approval_url"))
+                {
+                    //saving the payapalredirect URL to which user will be redirected for payment  
+                    paypalRedirectUrl = lnk.href;
+                }
+            }
+            // saving the paymentID in the key guid  
+            Session.Add(guid, createdPayment.id);
+            return paypalRedirectUrl;
+        }
+
+
+
+        private PayPal.Api.Payment payment;
+        private Payment ExecutePayment(APIContext apiContext, string payerId, string paymentId)
+        {
+            var paymentExecution = new PaymentExecution()
+            {
+                payer_id = payerId
+            };
+            this.payment = new Payment()
+            {
+                id = paymentId
+            };
+            return this.payment.Execute(apiContext, paymentExecution);
+        }
+        private Payment CreatePayment(string hoten, string sdt, string diachi,APIContext apiContext, string redirectUrl)
+         {
+            //create itemlist and add item objects to it  
+            var itemList = new ItemList()
+            {
+                items = new List<Item>()
+            };
+            List<CartItem> shoppingCart = Session["ShoppingCart"] as List<CartItem>;
+
+            foreach (var item in shoppingCart)
+            {
+                //Adding Item Details like name, currency, price etc  
+                itemList.items.Add(new Item()
+                {
+                    name = item.TenSP,
+                    currency = "USD",
+                    price = item.Gia.ToString(),
+                    quantity = item.SoLuong.ToString(),
+                    sku = "Loai"+item.IdLoaiSP.ToString(),
+                });
+            }
+            
+            var payer = new Payer()
+            {
+                payment_method = "paypal"
+            };
+            // Configure Redirect Urls here with RedirectUrls object  
+            var redirUrls = new RedirectUrls()
+            {
+                cancel_url = redirectUrl + "&Cancel=true",
+                return_url = redirectUrl
+            };
+            double sum = 0;
+            foreach (var item in shoppingCart)
+            {
+                sum += (item.Gia ?? 0) * item.SoLuong;
+            }
+            // Adding Tax, shipping and Subtotal details  
+            var details = new Details()
+            {
+                tax = "0",
+                shipping = "0",
+                subtotal = sum.ToString(),
+            };
+            //Final amount with details  
+            var amount = new Amount()
+            {
+                currency = "USD",
+                total = sum.ToString(), // Total must be equal to sum of tax, shipping and subtotal.  
+                details = details,
+            };
+            var transactionList = new List<Transaction>();
+            // Adding description about the transaction  
+            transactionList.Add(new Transaction()
+            {
+                description = "Thanh toán hoá đơn",
+                invoice_number = Convert.ToString((new Random()).Next(100000)), //Generate an Invoice No  
+                amount = amount,
+                item_list = itemList
+            });
+            this.payment = new Payment()
+            {
+                intent = "sale",
+                payer = payer,
+                transactions = transactionList,
+                redirect_urls = redirUrls
+            };
+            // Create a payment using a APIContext  
+            return this.payment.Create(apiContext);
+        }
+
+
+
+
         public ActionResult FormHistory()
         {
             tb_KHACHHANG kh = new tb_KHACHHANG();

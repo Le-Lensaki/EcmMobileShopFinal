@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Success View</title>
+</head>
+<body>
+    <div>
+
+
+        <link href="~/assets/web/css/FailedPayment.css" rel="stylesheet" />
+
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <style>
+            .cat_menu_container ul {
+                visibility: hidden;
+                opacity: 0;
+            }
+        </style>
+        <!------ Include the above in your HEAD tag ---------->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <br />
+                    <div class="error-template">
+                        <h1 class="label label-success" style="font-size: 35px;">
+                            Thành công
+                        </h1>
+
+                        <br />
+                        <br />
+                        <br />
+                        <div class="error-actions">
+                            <a href="/" class="btn btn-primary btn-lg">
+                                <span class="glyphicon glyphicon-home"></span>
+                                Quay về trang chủ
+                            </a><a href="@Url.Action("Index", "Contact")" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Liên hệ hỗ trợ </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

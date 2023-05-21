@@ -80,7 +80,12 @@
 
                     <div class="cart_buttons">
                         <button type="button" class="button cart_button_clear" onclick="location.href='@Url.Action("Shop", "Home")'">Mua sắm tiếp</button>
-                        <button type="button" class="button cart_button_checkout" onclick="location.href='@Url.Action("Index", "OrdersPayment")'">Đặt hàng</button>
+                        @if (User.Identity.IsAuthenticated) // Kiểm tra xem User đã đăng nhập hay chưa
+                        {
+                        <button type="button" class="button cart_button_checkout" onclick="location.href='@Url.Action("PaymentWithPaypal", "OrdersPayment")'">Thanh toán qua Paypal</button>
+                        }
+
+                        <button type="button" class="button cart_button_checkout" onclick="location.href='@Url.Action("Index", "OrdersPayment")'">Đặt hàng giao tận nơi</button>
                     </div>
                 </div>
             </div>

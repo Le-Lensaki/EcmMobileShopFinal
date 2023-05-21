@@ -663,3 +663,5 @@ E:\EcmMobileShopFinal\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj
 E:\EcmMobileShopFinal\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.csproj.CopyComplete
 E:\EcmMobileShopFinal\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.dll
 E:\EcmMobileShopFinal\EcmMobileShop\EcmMobileShop\obj\Debug\EcmMobileShop.pdb
+E:\EcmMobileShopFinal\EcmMobileShop\EcmMobileShop\bin\PayPal.dll
+E:\EcmMobileShopFinal\EcmMobileShop\EcmMobileShop\bin\PayPal.xml
