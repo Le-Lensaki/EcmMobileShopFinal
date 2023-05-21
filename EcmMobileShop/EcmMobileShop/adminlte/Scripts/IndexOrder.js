@@ -11,7 +11,10 @@ $(function () {
         if ($(this).val() < selectedValue) {
             $(this).hide();
         }
-        if (selectedValue >= 3 && $(this).val() == 5) {
+        if (selectedValue == 1 && $(this).val() == 3) {
+            $(this).hide();
+        }
+        if (selectedValue >= 3 && $(this).val() == 6) {
             $(this).hide();
         }
     });
