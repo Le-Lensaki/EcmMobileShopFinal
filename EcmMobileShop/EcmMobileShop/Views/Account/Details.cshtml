@@ -1,0 +1,77 @@
+﻿@model EcmMobileShop.Models.SignUpModel
+
+@{ ViewBag.Title = "Details";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+<style>
+    .cat_menu_container ul {
+        visibility: hidden;
+        opacity: 0;
+    }
+</style>
+<div class="container" style="max-width: 1140px; margin-top:10px ">
+    <div class="card card-info">
+        <div class="card-header">
+            <h3 class="card-title">Feedback</h3>
+        </div>
+        <div class="card-body">
+            <div>
+                <h4>SignUpModel</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.SDT)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.SDT)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Diachi)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Diachi)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Roles)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Roles)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Status)
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Cập nhật", "Edit", new { id = Model.id }) |
+                @Html.ActionLink("Quay về trang chủ", "Index", "Home")
+            </p>
+        </div>
+    </div>
+</div>

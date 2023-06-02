@@ -2868,6 +2868,8 @@
     <Content Include="Views\OrdersPayment\Feedback.cshtml" />
     <Content Include="Views\OrdersPayment\FailureView.cshtml" />
     <Content Include="Views\OrdersPayment\SuccessView.cshtml" />
+    <Content Include="Views\Account\Details.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -12,6 +12,8 @@ using Microsoft.Owin.Security;
 using FireSharp.Interfaces;
 using Firebase.Auth;
 using FireSharp.Response;
+using System.Data.Entity;
+using System.Net;
 
 namespace EcmMobileShop.Controllers
 {
@@ -202,6 +204,89 @@ namespace EcmMobileShop.Controllers
             PushResponse response = client.Push("Khachhang/", data);
             data.id = response.Result.name;
             SetResponse setResponse = client.Set("Khachhang/" + data.id, data);
+        }
+        public ActionResult Details(string email)
+        {
+            // Khởi tạo client
+            IFirebaseClient client = new FireSharp.FirebaseClient(config);
+
+            var response = client.Get("Khachhang/");
+            Dictionary<string, SignUpModel> data = response.ResultAs<Dictionary<string, SignUpModel>>();
+
+            if (email == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            SignUpModel customer = data.Values.FirstOrDefault(x => x.Email == email);
+            if (customer == null)
+            {
+                return HttpNotFound();
+            }
+            return View(customer);
+        }
+
+        private async void UpdateKhachHangToFirebase(SignUpModel model)
+        {
+            IFirebaseClient client = new FireSharp.FirebaseClient(config);
+
+            var data = model;
+
+            SetResponse setResponse = client.Set("Khachhang/" + data.id, data);
+        }
+
+        // GET: OneTechAdmin/AccountAdmin/Edit/5
+        public ActionResult Edit(string id)
+        {
+            // Khởi tạo client
+            IFirebaseClient client = new FireSharp.FirebaseClient(config);
+
+            var response = client.Get("Khachhang/");
+            Dictionary<string, SignUpModel> data = response.ResultAs<Dictionary<string, SignUpModel>>();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            SignUpModel customer = data.Values.FirstOrDefault(x => x.id == id);
+            if (customer == null)
+            {
+                return HttpNotFound();
+            }
+            return View(customer);
+        }
+
+        // POST: OneTechAdmin/AccountAdmin/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+
+        public ActionResult Edit([Bind(Include = "id,Name,SDT,Diachi,Email,Password,Roles,Status")] SignUpModel signUpModel)
+        {
+            if (ModelState.IsValid)
+            {
+                signUpModel.Status = true;
+
+                UpdateKhachHangToFirebase(signUpModel);
+
+                tb_KHACHHANG kh = ecmMobile.tb_KHACHHANG.SingleOrDefault(c => c.SDT == signUpModel.SDT);
+
+                if (kh != null)
+                {
+                    // Update các thuộc tính
+                    kh.DiaChi = signUpModel.Diachi;
+                    kh.TenKH = signUpModel.Name;
+                    kh.TrangThai = true;
+
+                    // Đính kèm đối tượng vào DbContext và xác định rằng nó đã bị thay đổi
+                    ecmMobile.tb_KHACHHANG.Attach(kh);
+                    ecmMobile.Entry(kh).State = EntityState.Modified;
+
+                    // Lưu thay đổi vào cơ sở dữ liệu
+                    ecmMobile.SaveChanges();
+                }
+
+                return RedirectToAction("Details", new { email = signUpModel.Email });
+            }
+            return View(signUpModel);
         }
         public async void dangky(SignUpModel model)
         {
